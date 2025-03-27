@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Beranda</title>
+    <!-- ======= Styles ====== -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+
+  <body>
+    <!-- =============== Navigation ================ -->
+    <div class="container">
+      <div class="navigation">
+        <ul>
+          <li>
+            <a href="index.html">
+              <span class="icon">
+                <img src="assets/imgs/logo.png" alt="Logo" style="width: 30px; height: 30px;">
+              </span>
+              <span class="title">Admin</span>
+            </a>
+          </li>
+
+          <li class="active">
+            <a href="index.html">
+              <span class="icon">
+                <ion-icon name="home-outline"></ion-icon>
+              </span>
+              <span class="title">Beranda</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="data-mahasiswa.html">
+              <span class="icon">
+                <ion-icon name="people-outline"></ion-icon>
+              </span>
+              <span class="title">Data Mahasiswa</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="forum-diskusi.html">
+              <span class="icon">
+                <ion-icon name="chatbubble-outline"></ion-icon>
+              </span>
+              <span class="title">Forum Diskusi</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="info-pariwisata.html">
+              <span class="icon">
+                <ion-icon name="aperture"></ion-icon>
+              </span>
+              <span class="title">Info Pariwisata</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="lapangan-pekerjaan.html">
+              <span class="icon">
+                <ion-icon name="git-network"></ion-icon>
+              </span>
+              <span class="title">Lapangan Pekerjaan</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="pengaturan.html">
+              <span class="icon">
+                <ion-icon name="settings-outline"></ion-icon>
+              </span>
+              <span class="title">Pengaturan</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="pengguna.html">
+              <span class="icon">
+                <ion-icon name="lock-closed-outline"></ion-icon>
+              </span>
+              <span class="title">Pengguna</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="login.html">
+              <span class="icon">
+                <ion-icon name="log-out-outline"></ion-icon>
+              </span>
+              <span class="title">Keluar</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- ========================= Main ==================== -->
+      <div class="main">
+        <div class="topbar">
+          <div class="toggle">
+            <ion-icon name="menu-outline"></ion-icon>
+          </div>
+
+          <div class="search">
+            <label>
+              <input type="text" placeholder="Cari di sini" />
+              <ion-icon name="search-outline"></ion-icon>
+            </label>
+          </div>
+
+          <div class="user">
+            <img src="assets/imgs/logo.png" alt="" class="user-img" />
+            <div class="user-menu">
+              <div class="user-info">
+                <img src="assets/imgs/logo.png" alt="" />
+                <div class="info">
+                  <h3>Admin DECAA</h3>
+                  <small>Super Admin</small>
+                </div>
+              </div>
+              <ul>
+                <li>
+                  <ion-icon name="person-outline"></ion-icon>
+                  <a href="#">Profil</a>
+                </li>
+                <li>
+                  <ion-icon name="create-outline"></ion-icon>
+                  <a href="#">Ubah Profil</a>
+                </li>
+                <li>
+                  <ion-icon name="settings-outline"></ion-icon>
+                  <a href="#">Pengaturan</a>
+                </li>
+                <li>
+                  <ion-icon name="log-out-outline"></ion-icon>
+                  <a href="#">Keluar</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- ======================= Cards ================== -->
+        <div class="cardBox">
+          <div class="card">
+            <div>
+              <div class="numbers">570</div>
+              <div class="cardName">Total Mahasiswa</div>
+            </div>
+
+            <div class="iconBx">
+              <ion-icon name="people"></ion-icon>
+            </div>
+          </div>
+
+          <div class="card">
+            <div>
+              <div class="numbers">10</div>
+              <div class="cardName">Total Saluran Diskusi</div>
+            </div>
+
+            <div class="iconBx">
+              <ion-icon name="chatbubbles-outline"></ion-icon>
+            </div>
+          </div>
+
+          <div class="card">
+            <div>
+              <div class="numbers">46</div>
+              <div class="cardName">Total Destinasi Wisata</div>
+            </div>
+
+            <div class="iconBx">
+              <ion-icon name="aperture"></ion-icon>
+            </div>
+          </div>
+
+          <div class="card">
+            <div>
+              <div class="numbers">24</div>
+              <div class="cardName">Loker Terkini</div>
+            </div>
+
+            <div class="iconBx">
+              <ion-icon name="cash-outline"></ion-icon>
+            </div>
+          </div>
+        </div>
+
+        <!-- ================ Grafik ================= -->
+        <!-- <div class="cardBox">
+                <div class="card">
+                    <div id="chart"></div>
+                </div>
+            </div> -->
+
+        <!-- <div class="chart-container">
+          <div class="chart-box">
+            <div id="chart"></div>
+          </div>
+
+          <div class="chart-info">
+            <h3>Keterangan Grafik</h3>
+            <p>
+              Grafik ini menampilkan total mahasiswa berdasarkan lokasi kuliah.
+            </p>
+            <div id="pieChart"></div>
+          </div>
+        </div> -->
+        <div class="chart-container">
+          <div id="chart4" class="chart-item"></div>
+          <div id="chart3" class="chart-item"></div>
+          <div id="chart5" class="chart-item"></div>
+          <div id="chart1" class="chart-item"></div>
+          <div id="chart6" class="chart-item"></div>
+          <div id="chart7" class="chart-item"></div>
+          <div id="chart8" class="chart-item"></div>
+          <div id="chart2" class="chart-item"></div>
+        </div>
+
+        <!-- ================ Trending Topics ================= -->
+        <div class="details">
+          <div class="recentOrders">
+            <div class="cardHeader">
+              <h2>Trending Topics</h2>
+              <a href="#" class="btn">Lihat Semua</a>
+            </div>
+
+            <table>
+              <thead>
+                <tr>
+                  <th>Peringkat</th>
+                  <th>Topik</th>
+                  <th>Saluran</th>
+                  <th>Pembahasan</th>
+                  <!-- <th>Status</th> -->
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>Pantai Karang Bolong</td>
+                  <td>Wisata</td>
+                  <td>123K Chat</td>
+                  <!-- <td><span class="status return">Hot</span></td> -->
+                </tr>
+
+                <tr>
+                  <td>2</td>
+                  <td>Loker Pacitan</td>
+                  <td>Loker</td>
+                  <td>56K Chat</td>
+                  <!-- <td><span class="status pending">Pending</span></td> -->
+                </tr>
+
+                <tr>
+                  <td>3</td>
+                  <td>Goa Gong</td>
+                  <td>Wisata</td>
+                  <td>40K Chat</td>
+                  <!-- <td><span class="">Return</span></td> -->
+                </tr>
+
+                <tr>
+                  <td>4</td>
+                  <td>Derag Race</td>
+                  <td>Wisata</td>
+                  <td>10K Chat</td>
+                  <!-- <td><span class="status inProgress">In Progress</span></td> -->
+                </tr>
+
+                <tr>
+                  <td>5</td>
+                  <td>Hotel Parai Beach</td>
+                  <td>Wisata</td>
+                  <td>6K Chat</td>
+                  <!-- <td><span class="status delivered">Delivered</span></td> -->
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- ================= New Customers ================ -->
+          <!-- <div class="recentCustomers">
+            <div class="cardHeader">
+              <h2>Recent Customers</h2>
+            </div>
+
+            <table>
+              <tr>
+                <td width="60px">
+                  <div class="imgBx">
+                    <img src="assets/imgs/customer02.jpg" alt="" />
+                  </div>
+                </td>
+                <td>
+                  <h4>
+                    David <br />
+                    <span>Italy</span>
+                  </h4>
+                </td>
+              </tr>
+
+              <tr>
+                <td width="60px">
+                  <div class="imgBx">
+                    <img src="assets/imgs/customer01.jpg" alt="" />
+                  </div>
+                </td>
+                <td>
+                  <h4>
+                    Amit <br />
+                    <span>India</span>
+                  </h4>
+                </td>
+              </tr>
+
+              <tr>
+                <td width="60px">
+                  <div class="imgBx">
+                    <img src="assets/imgs/customer02.jpg" alt="" />
+                  </div>
+                </td>
+                <td>
+                  <h4>
+                    David <br />
+                    <span>Italy</span>
+                  </h4>
+                </td>
+              </tr>
+
+              <tr>
+                <td width="60px">
+                  <div class="imgBx">
+                    <img src="assets/imgs/customer01.jpg" alt="" />
+                  </div>
+                </td>
+                <td>
+                  <h4>
+                    Amit <br />
+                    <span>India</span>
+                  </h4>
+                </td>
+              </tr>
+
+              <tr>
+                <td width="60px">
+                  <div class="imgBx">
+                    <img src="assets/imgs/customer02.jpg" alt="" />
+                  </div>
+                </td>
+                <td>
+                  <h4>
+                    David <br />
+                    <span>Italy</span>
+                  </h4>
+                </td>
+              </tr>
+
+              <tr>
+                <td width="60px">
+                  <div class="imgBx">
+                    <img src="assets/imgs/customer01.jpg" alt="" />
+                  </div>
+                </td>
+                <td>
+                  <h4>
+                    Amit <br />
+                    <span>India</span>
+                  </h4>
+                </td>
+              </tr>
+
+              <tr>
+                <td width="60px">
+                  <div class="imgBx">
+                    <img src="assets/imgs/customer01.jpg" alt="" />
+                  </div>
+                </td>
+                <td>
+                  <h4>
+                    David <br />
+                    <span>Italy</span>
+                  </h4>
+                </td>
+              </tr>
+
+              <tr>
+                <td width="60px">
+                  <div class="imgBx">
+                    <img src="assets/imgs/customer02.jpg" alt="" />
+                  </div>
+                </td>
+                <td>
+                  <h4>
+                    Amit <br />
+                    <span>India</span>
+                  </h4>
+                </td>
+              </tr>
+            </table>
+          </div> -->
+        </div>
+      </div>
+    </div>
+
+    <!-- =========== Scripts =========  -->
+    <script src="assets/js/main.js"></script>
+
+    <!-- ApexCharts -->
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+
+    <!-- ====== ionicons ======= -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+
+    <!-- Highchart -->
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="assets/js/chart/chart1.js"></script>
+    <script src="assets/js/chart/chart2.js"></script>
+    <script src="assets/js/chart/chart3.js"></script>
+    <script src="assets/js/chart/chart4.js"></script>
+    <script src="assets/js/chart/chart5.js"></script>
+    <script src="assets/js/chart/chart6.js"></script>
+    <script src="assets/js/chart/chart7.js"></script>
+    <script src="assets/js/chart/chart8.js"></script>
+
+  </body>
+</html>

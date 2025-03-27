@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login - Admin Dashboard</title>
+    <!-- ======= Styles ====== -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <style>
+      .login-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background: var(--grey);
+      }
+
+      .login-box {
+        position: relative;
+        width: 400px;
+        padding: 40px;
+        background: var(--white);
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      }
+
+      .login-box h2 {
+        margin-bottom: 30px;
+        text-align: center;
+        font-weight: 600;
+        color: var(--blue);
+      }
+
+      .login-box .logo {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      .login-box .logo img {
+        width: 80px;
+        height: 80px;
+      }
+
+      .input-group {
+        margin-bottom: 20px;
+      }
+
+      .input-group label {
+        display: block;
+        margin-bottom: 5px;
+        color: var(--black2);
+      }
+
+      .input-group input {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        font-size: 16px;
+      }
+
+      .login-btn {
+        width: 100%;
+        padding: 12px;
+        background: var(--blue);
+        color: var(--white);
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: 500;
+      }
+
+      .login-btn:hover {
+        background: #0056b3;
+      }
+
+      .forgot-password {
+        text-align: center;
+        margin-top: 15px;
+      }
+
+      .forgot-password a {
+        color: var(--blue);
+        text-decoration: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="login-container">
+      <div class="login-box">
+        <div class="logo">
+          <img src="assets/imgs/logo.png" alt="Logo">
+        </div>
+        <h2>Login Admin</h2>
+        <form action="index.html" method="GET">
+          <div class="input-group">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" required>
+          </div>
+          <div class="input-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required>
+          </div>
+          <button type="submit" class="login-btn">Login</button>
+          <div class="forgot-password">
+            <a href="#">Lupa Password?</a>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- ====== ionicons ======= -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  </body>
+</html> 

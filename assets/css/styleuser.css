@@ -1,0 +1,271 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* border: 1px solid red; */
+}
+
+img {
+    width: 30px;
+    height: 30px;
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1 {
+    font-size: 1.7em;
+}
+
+body {
+    width: 100%;
+    max-width: 768px;
+    height: auto;
+    margin-inline: auto;
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, Helvetica, sans-serif;
+    scroll-behavior: smooth;
+    z-index: 9;
+}
+/* body.filtered {
+    filter: blur(50px);
+    -webkit-filter: blur(50px);
+    transition: filter 0.5s ease-in-out;
+} */
+
+header {
+    width: 100%;
+    height: 250px;
+    display: block;
+    position: relative;
+    overflow: hidden;
+}
+
+header .header__top {
+    background-color: transparent;
+    position: fixed;
+    z-index: 5;
+    padding: 0.5em 1em;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .header__top input {
+    height: 30px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    padding-inline: 0.5em;
+    /* opacity: 70%; */
+    font-weight: bold;
+    /* background-color: transparent; */
+    background-color: #ffffff7d;
+    border: none;
+
+}
+
+header .header__top .avatar {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    background-color: #ffffff7d;
+}
+
+header ul.image__slider {
+    position: fixed;
+    width: 100%;
+    height: 350px;
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+header ul.image__slider li.image__item {
+    width: 100%;
+    height: 100%;
+    flex-shrink: 0;
+    flex-grow: 1;
+    flex-basis: 1;
+    overflow: hidden;
+}
+
+header ul.image__slider li.image__item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+
+main {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    /* position: fixed; */
+    top: calc(100% - 415px);
+    border-radius: 30px 30px 0px 0px;
+    -webkit-border-radius: 30px 30px 0px 0px;
+    -moz-border-radius: 30px 30px 0px 0px;
+    -ms-border-radius: 30px 30px 0px 0px;
+    -o-border-radius: 30px 30px 0px 0px;
+    z-index: 9999;
+    background-color: #fff;
+}
+
+main section.content__menu {
+    width: 100%;
+    position: relative;
+    padding: 1em;
+    /* background-color: #fff; */
+}
+
+.menu__item a.active {
+    background-color: #007bff2f; /* Warna latar belakang saat aktif */
+    color: white; /* Warna teks saat aktif */
+    border-radius: 6px;
+    padding: 30px 10px;
+}
+
+main section.content__menu ul.menu__list {
+    display: flex;
+    gap: 0.5em;
+    justify-content: center;
+    align-items: center;
+
+}
+
+main section.content__menu ul.menu__list li.menu__item {
+    width: 100%;
+    height: 50px;
+    padding: 5px;
+    /* background-color: #ddd; */
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+main section.content__menu ul.menu__list li.menu__item a {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #000;
+    font-size: 0.9em;
+    font-weight: 500;
+}
+
+main section.content__container {
+    width: 100%;
+    height: 100%;
+    padding: 1em;
+}
+
+main section.content__container .content__header {
+    padding-block: 0.5em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+main section.content__container .content__header h1 {
+    font-size: 1em;
+    font-weight: 700;
+    color: #000;
+}
+
+main section.content__container .content__header a {
+    font-size: 1em;
+    color: #000;
+    opacity: 70%;
+}
+
+main section.content__container ul.content__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 150px);
+    gap: 0.5em;
+    position: relative;
+}
+
+main section.content__container ul.content__list li.content__item {
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    background-color: #ddd;
+    overflow: hidden;
+    transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+}
+
+main section.content__container ul.content__list li.content__item img {
+    width: 150px;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+}
+
+main section.content__container #content__global {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    gap: 0.5em;
+}
+
+main section.content__container #content__global li.content__item {
+    height: 150px;
+}
+
+main section.content__container ul.content__list li.content__item.active img {
+    position: fixed;
+    width: 85%;
+    height: 65%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1.1);
+    -webkit-transform: translate(-50%, -50%) scale(1.1);
+    -moz-transform: translate(-50%, -50%) scale(1.1);
+    -ms-transform: translate(-50%, -50%) scale(1.1);
+    -o-transform: translate(-50%, -50%) scale(1.1);
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    z-index: 999;
+    object-fit: cover;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+}
