@@ -38,7 +38,8 @@ body {
   background: var(--blue);
   border-left: 10px solid var(--blue);
   transition: 0.5s;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 .navigation.active {
   width: 67px;
@@ -91,8 +92,16 @@ body {
   text-align: center;
   margin-right: 12px;
 }
-.navigation ul li a .icon ion-icon {
-  font-size: 1.75rem;
+.navigation ul li a .icon svg {
+  width: 30.5px;
+  height: 30.5px;
+}
+.navigation ul li a .icon svg.icon-logout {
+  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
 }
 
 .navigation ul li a .title {
@@ -271,6 +280,7 @@ body {
 }
 
 .user-menu ul li ion-icon {
+  margin-left: 5px;
   margin-right: 10px;
   font-size: 20px;
   color: var(--black2);
