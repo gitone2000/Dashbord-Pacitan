@@ -233,4 +233,36 @@ button:hover {
     transition: 0.3s;
 }
 
+/* styling tabs */
+.forum-tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.tab-button {
+    padding: 10px 20px;
+    border: none;
+    background: #007bff;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    margin: 0 5px;
+    transition: 0.3s;
+}
+
+.tab-button.active {
+    background: #0056b3;
+}
+
+.forum-content {
+    display: block;
+}
+
+.hidden {
+    display: none;
+}
+
+
  
