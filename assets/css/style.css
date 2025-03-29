@@ -40,6 +40,10 @@ body {
   transition: 0.5s;
   overflow-x: hidden;
   overflow-y: auto;
+  scrollbar-width: none;
+}
+.navigation::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
 }
 .navigation.active {
   width: 67px;
