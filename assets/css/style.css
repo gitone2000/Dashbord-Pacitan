@@ -331,8 +331,16 @@ body {
 }
 
 .cardBox .card .iconBx {
-  font-size: 3.5rem;
+  width: 3.5em;
   color: var(--black2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  >svg{
+    width: 100%;
+    height: 100%;
+  }
 }
 
 .cardBox .card:hover {

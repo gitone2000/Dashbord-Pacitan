@@ -1,3 +1,11 @@
+* {
+  font-family: "Ubuntu", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* border: 1px solid red; */
+}
+
 .forum {
   position: relative;
   width: 100%;
@@ -90,6 +98,7 @@ body {
   border-radius: 10px;
   border: 1px solid #ccc;
   margin-bottom: 20px;
+  height: 50px;
 }
 .post-form textarea {
   flex: 1;
@@ -99,6 +108,7 @@ body {
   outline: none;
   padding: 5px;
   font-size: 14px;
+  align-content: center;
   border-radius: 5px;
 }
 .post-form button {
@@ -111,8 +121,10 @@ body {
   cursor: pointer;
 }
 .post-icon {
-  font-size: 24px;
-  color: #888;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  object-fit: cover;
   margin-right: 10px;
 }
 .post-item {
@@ -167,18 +179,28 @@ body {
   margin-top: 10px;
 }
 .image-button {
-  font-size: 20px;
+  font-size: 25px;
   color: #007bff;
   margin-left: 10px;
   cursor: pointer;
 }
 
+.post-actions {
+  display: flex;
+  gap: 30px; /* Jarak antar tombol */
+}
+
 .post-actions button {
+  margin-top: 6px;
   background: none;
   border: none;
-  color: blue;
+  color: #1d1d1d;
+  font-size: 12px;
   cursor: pointer;
-  margin-right: 10px;
+  display: flex;
+  align-items: center;
+  gap: 5px; /* Spasi antara ikon dan teks */
+  text-transform: capitalize;
 }
 .chat-container {
   display: flex;
