@@ -1,268 +1,342 @@
+* {
+  font-family: "Ubuntu", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* border: 1px solid red; */
+}
+
 .forum {
-    position: relative;
-    width: 100%;
-    padding: 20px;
-  }
-  .forum-container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 20px auto; /* Auto supaya berada di tengah */
-    padding: 20px;
-    border: 2px solid #ccc;
-    border-radius: 10px;
-    background: #fff;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-  }
+  position: relative;
+  width: 100%;
+  padding: 20px;
+}
+.forum-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 20px auto; /* Auto supaya berada di tengah */
+  padding: 20px;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
 
-  .inside-forum {
-     background: var(--white);
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    transition: 0.3s ease-in-out;
-  }
-  
-  /* Tambahkan efek hover untuk inside-forum */
-  .inside-forum:hover {
-    transform: translateY(-3px);
-    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15);
-  }
-  
-  /* Styling untuk judul dalam konten */
-  .cardHeader h2 {
-    font-size: 24px;
-    color: var(--blue);
-    margin-bottom: 15px;
-    text-align: center;
-    font-weight: bold;
-  }
-  
-  /* Jika konten memiliki teks */
-  .inside-forum p {
-    font-size: 16px;
-    color: #333;
-    line-height: 1.5;
-  }
+.inside-forum {
+  background: var(--white);
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  transition: 0.3s ease-in-out;
+}
 
-  /* Layout utama */
-  body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    background: #f0f2f5;
+/* Tambahkan efek hover untuk inside-forum */
+.inside-forum:hover {
+  /* transform: translateY(-3px); */
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Styling untuk judul dalam konten */
+.cardHeader h2 {
+  font-size: 24px;
+  color: var(--blue);
+  margin-bottom: 15px;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* Jika konten memiliki teks */
+.inside-forum p {
+  font-size: 16px;
+  color: #333;
+  line-height: 1.5;
+}
+
+/* Layout utama */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  background: #f0f2f5;
 }
 .forum-item {
-    display: flex;
-    width: 100%;
-    gap: 20px;
+  display: flex;
+  width: 100%;
+  gap: 20px;
 }
-.forum-left, .forum-right {
-    background: white;
-    border-radius: 10px;
-    padding: 15px;
-    border: 1px solid #ddd; /* Border tambahan */
-    overflow-y: auto;
-    max-height: 500px; /* Agar bisa scroll jika banyak konten */
+.forum-left,
+.forum-right {
+  background: white;
+  border-radius: 10px;
+  padding: 15px;
+  border: 1px solid #ddd; /* Border tambahan */
+  overflow-y: auto;
+  max-height: 500px; /* Agar bisa scroll jika banyak konten */
 }
 .forum-left {
-    flex: 1;
-    margin-right: 20px;
-    color: white;
-    background: var(--blue);
+  flex: 1;
+  margin-right: 20px;
+  color: white;
+  background: var(--blue);
 }
 .forum-right {
-    flex: 1;
-    color: white;
-    background: var(--blue);
+  flex: 1;
+  color: white;
+  background: var(--blue);
 }
 .feed-header {
-    font-size: 1.0em;
-    margin-bottom: 10px;
+  font-size: 1em;
+  margin-bottom: 10px;
+}
+.post-form {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  margin-bottom: 20px;
+  height: 50px;
 }
 .post-form textarea {
-    width: 100%;
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    
+  flex: 1;
+  height: 40px;
+  border: none;
+  resize: none;
+  outline: none;
+  padding: 5px;
+  font-size: 14px;
+  align-content: center;
+  border-radius: 5px;
 }
 .post-form button {
-    width: 100%;
-    padding: 10px;
-    background: blue;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-bottom: 10px;
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+.post-icon {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 10px;
 }
 .post-item {
-    background: #fff;
-    padding: 10px;
-    margin-bottom: 10px;
-    border-radius: 5px;
-    box-shadow: 0px 0px 5px rgba(0,0,0,0.1);
-    border: 1px solid #ddd;
+  background: #fff;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ddd;
 }
 .post-user {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 .post-user img {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    margin-right: 10px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.post-user span {
+  font-size: 12px; /* Sesuaikan ukuran */
+  color: #555; /* Warna agar terlihat */
+  display: block; /* Pastikan muncul */
+  margin-top: 3px; /* Jarak dari nama */
+}
+
+.username {
+  font-size: 14px; /* Sesuaikan ukuran */
+  font-weight: bold;
+  color: #000; /* Ubah warna jika perlu */
+  display: block; /* Sesuaikan warna */
+}
+.chat-username {
+  font-weight: bold;
+  font-size: 15px;
+  display: block;
+  color: #000000;
+}
+.chat-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin: 0 10px;
 }
 
 .post-image {
-    width: 100%;
-    max-height: 300px;
-    object-fit: cover;
-    border-radius: 5px;
-    margin-top: 10px;
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+.image-button {
+  font-size: 25px;
+  color: #007bff;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.post-actions {
+  display: flex;
+  gap: 30px; /* Jarak antar tombol */
 }
 
 .post-actions button {
-    background: none;
-    border: none;
-    color: blue;
-    cursor: pointer;
-    margin-right: 10px;
+  margin-top: 6px;
+  background: none;
+  border: none;
+  color: #1d1d1d;
+  font-size: 12px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px; /* Spasi antara ikon dan teks */
+  text-transform: capitalize;
 }
 .chat-container {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 .chat-header {
-    font-size: 1.0em;
-    margin-bottom: 10px;
+  font-size: 1em;
+  margin-bottom: 10px;
 }
 .chat-message {
-    flex-grow: 1;
-    height: 383px; /* Ditinggikan agar lebih banyak chat */
-    overflow-y: auto;
-    background: #001749;
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #000000;
-    flex-direction: column;
+  flex-grow: 1;
+  height: 383px; /* Ditinggikan agar lebih banyak chat */
+  overflow-y: auto;
+  background: #001749;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #000000;
+  flex-direction: column;
 }
 .chat-message-list {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
 }
 .input-message {
-    display: flex;
-    margin-top: 10px;
+  display: flex;
+  margin-top: 10px;
 }
 .input-message input {
-    flex-grow: 1;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+  flex-grow: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
 .input-message button {
-    padding: 10px;
-    margin-left: 10px;
-    background: blue;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+  padding: 10px;
+  margin-left: 10px;
+  background: blue;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 .chat-message-item {
-    display: flex;
-    align-items: flex-start;
-    margin-bottom: 15px;
-    max-width: 95%;
-    padding: 5px;
-    font-size: 14px; /* Perkecil ukuran teks */
-    border-radius: 8px; /* Sesuaikan sudut */
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 15px;
+  max-width: 95%;
+  padding: 5px;
+  font-size: 14px; /* Perkecil ukuran teks */
+  border-radius: 8px; /* Sesuaikan sudut */
 }
-.chat-message-item span {
-    width: 30px;
-    height: 30px;
-    background: gray;
-    border-radius: 50%;
-    margin-right: 10px;
-}
+/* .chat-message-item span {
+  width: 30px;
+  height: 30px;
+  background: gray;
+  border-radius: 50%;
+  margin-right: 10px;
+} */
 .chat-message-item p {
-    background: #e4e6eb;
-    padding: 10px;
-    border-radius: 10px;
-    max-width: 70%;
-    border: 1px solid #ccc;
+  background: #e4e6eb;
+  padding: 10px;
+  border-radius: 10px;
+  max-width: 70%;
+  border: 1px solid #ccc;
 }
 .chat-message-item.left {
-    justify-content: flex-start;
+  justify-content: flex-start;
 }
 
 .chat-message-item.right {
-    justify-content: flex-end; /* Ini membuat bubble chat ke kanan */
-     margin-left: auto;
+  justify-content: flex-end; /* Ini membuat bubble chat ke kanan */
+  margin-left: auto;
+}
+.chat-message-item.right .chat-bubble {
+  background: #007bff;
+  color: white;
+}
+.chat-message-item.right .chat-username {
+  color: #fff;
 }
 
 .chat-message-item.left p {
-    background: #e4e6eb;
-    padding: 10px;
-    border-radius: 10px;
-    max-width: 75%;
+  background: #e4e6eb;
+  padding: 10px;
+  border-radius: 10px;
+  max-width: 75%;
 }
 
 .chat-message-item.right p {
-    background: #007bff;
-    color: white;
-    padding: 10px;
-    border-radius: 10px;
-    max-width: 75%;
+  background: #007bff;
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+  max-width: 75%;
 }
 .chat-message-item.right span {
-    order: 2;
-    margin-left: 10px;
-    margin-right: 0;
+  order: 2;
+  margin-left: 10px;
+  margin-right: 0;
 }
 
 button:hover {
-    opacity: 0.8;
-    transition: 0.3s;
+  opacity: 0.8;
+  transition: 0.3s;
 }
 
 /* styling tabs */
 .forum-tabs {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
 }
 
 .tab-button {
-    padding: 10px 20px;
-    border: none;
-    background: #007bff;
-    color: white;
-    cursor: pointer;
-    font-size: 16px;
-    border-radius: 5px;
-    margin: 0 5px;
-    transition: 0.3s;
+  padding: 10px 20px;
+  border: none;
+  background: #007bff;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 5px;
+  margin: 0 5px;
+  transition: 0.3s;
 }
 
 .tab-button.active {
-    background: #0056b3;
+  background: #0056b3;
 }
 
 .forum-content {
-    display: block;
+  display: block;
 }
 
 .hidden {
-    display: none;
+  display: none;
 }
-
-
- 

@@ -131,7 +131,10 @@ main {
 main section.content__menu {
     width: 100%;
     position: relative;
+    display: flex;
     padding: 1em;
+    align-items: center;
+    justify-content: center;
     /* background-color: #fff; */
 }
 
@@ -143,16 +146,63 @@ main section.content__menu {
 }
 
 main section.content__menu ul.menu__list {
-    display: flex;
-    gap: 0.5em;
-    justify-content: center;
+    /* display: flex;
+    gap: 0.5em; */
+    /* justify-content: flex-start;
     align-items: center;
+    justify-content: center; */
 
+    /* overflow-x: auto; 
+    white-space: nowrap; 
+    scrollbar-width: thin; 
+    -webkit-overflow-scrolling: touch; 
+    scrollbar-width: none;
+    max-width: 100%;
+    scroll-snap-type: x mandatory; */
+    display: flex;
+    gap: 0.1em;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    white-space: nowrap;
+    max-width: 75%;
+
+}
+main section.content__menu ul.menu__list::-webkit-scrollbar {
+    display: none; /* Menghilangkan scrollbar di Chrome, Safari */
+}
+
+main section.content__menu div.menu__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.scroll-left, .scroll-right {
+    background-color: rgba(0, 0, 0, 0.137);
+    color: white;
+    border: none;
+    padding: 6px;
+    cursor: pointer;
+    font-size: 15px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.scroll-left {
+    left: 30px;
+    border-radius: 40%;
+    /* background-color: #007bff2f; */
+}
+
+.scroll-right {
+    right: 30px;
+    border-radius: 40%;
 }
 
 main section.content__menu ul.menu__list li.menu__item {
     width: 100%;
-    height: 50px;
+    height: 65px;
     padding: 5px;
     /* background-color: #ddd; */
     border-radius: 5px;
@@ -160,6 +210,10 @@ main section.content__menu ul.menu__list li.menu__item {
     -moz-border-radius: 5px;
     -ms-border-radius: 5px;
     -o-border-radius: 5px;
+
+    flex: 0 0 calc(25% - 0.5em); /* Menampilkan 4 menu dalam satu baris */
+    text-align: center;
+    scroll-snap-align: start;
 }
 
 main section.content__menu ul.menu__list li.menu__item a {
@@ -269,3 +323,5 @@ main section.content__container ul.content__list li.content__item.active img {
     -ms-transition: all 0.3s ease-in-out;
     -o-transition: all 0.3s ease-in-out;
 }
+
+
