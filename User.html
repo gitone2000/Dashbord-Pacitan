@@ -33,20 +33,66 @@
     </header>
     <main id="main">
       <section class="content__menu">
-        <ul class="menu__list">
-          <li class="menu__item">
-            <a href="#">
-              <img
-                width="48"
-                height="48"
-                src="https://img.icons8.com/color/48/home.png"
-                alt="home"
-              />
-              <span>Beranda</span>
-            </a>
-          </li>
+        <div class="menu__wrapper">
+          <button class="scroll-left">&lt;</button>
+          <ul class="menu__list">
             <li class="menu__item">
               <a href="#">
+                <img
+                  width="48"
+                  height="48"
+                  src="https://img.icons8.com/color/48/home.png"
+                  alt="home"
+                />
+                <span>Beranda</span>
+              </a>
+            </li>
+            <li class="menu__item">
+              <a href="forum-diskusi.html">
+                <img
+                  width="48"
+                  height="48"
+                  src="https://img.icons8.com/color/48/people-working-together.png"
+                  alt="people-working-together"
+                />
+                <span>Forum</span>
+              </a>
+            </li>
+            <li class="menu__item">
+              <a href="#">
+                <img
+                  width="48"
+                  height="48"
+                  src="https://img.icons8.com/color/48/student-male.png"
+                  alt="student-male.png"
+                />
+                <span>Mahasiswa</span>
+              </a>
+            </li>
+            <li class="menu__item">
+              <a href="#">
+                <img
+                  width="48"
+                  height="48"
+                  src="https://img.icons8.com/color/48/beach.png"
+                  alt="beach.png"
+                />
+                <span>Pariwisata</span>
+              </a>
+            </li>
+            <li class="menu__item">
+              <a href="#">
+                <img
+                  width="48"
+                  height="48"
+                  src="https://img.icons8.com/color/48/permanent-job.png"
+                  alt="permanent-job.png"
+                />
+                <span>Loker</span>
+              </a>
+            </li>
+            <li class="menu__item">
+              <a href="nunuters_user.html">
                 <img
                   width="48"
                   height="48"
@@ -56,51 +102,9 @@
                 <span>NUNUTERS</span>
               </a>
             </li>
-          <li class="menu__item">
-            <a href="forum-diskusi.html">
-              <img
-                width="48"
-                height="48"
-                src="https://img.icons8.com/color/48/people-working-together.png"
-                alt="people-working-together"
-              />
-              <span>Forum</span>
-            </a>
-          </li>
-          <li class="menu__item">
-            <a href="#">
-              <img
-                width="48"
-                height="48"
-                src="https://img.icons8.com/color/48/student-male.png"
-                alt="student-male.png"
-              />
-              <span>Mahasiswa</span>
-            </a>
-          </li>
-          <li class="menu__item">
-            <a href="#">
-              <img
-                width="48"
-                height="48"
-                src="https://img.icons8.com/color/48/beach.png"
-                alt="beach.png"
-              />
-              <span>Pariwisata</span>
-            </a>
-          </li>
-          <li class="menu__item">
-            <a href="#">
-              <img
-                width="48"
-                height="48"
-                src="https://img.icons8.com/color/48/permanent-job.png"
-                alt="permanent-job.png"
-              />
-              <span>Loker</span>
-            </a>
-          </li>
-        </ul>
+          </ul>
+          <button class="scroll-right">&gt;</button>
+        </div>
       </section>
       <section class="content__container">
         <div class="content__header">
@@ -195,5 +199,20 @@
     </main>
 
     <script src="assets/js/scriptuser.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const menuList = document.querySelector(".menu__list");
+        const scrollLeftBtn = document.querySelector(".scroll-left");
+        const scrollRightBtn = document.querySelector(".scroll-right");
+
+        scrollLeftBtn.addEventListener("click", () => {
+          menuList.scrollBy({ left: -100, behavior: "smooth" });
+        });
+
+        scrollRightBtn.addEventListener("click", () => {
+          menuList.scrollBy({ left: 100, behavior: "smooth" });
+        });
+      });
+    </script>
   </body>
 </html>
