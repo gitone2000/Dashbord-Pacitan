@@ -4,6 +4,45 @@
     box-sizing: border-box;
     /* border: 1px solid red; */
 }
+/* menu iconic */
+.floating-menu {
+    position: fixed;
+    z-index: 99999;
+    bottom: 20px;
+    right: 20px;
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, #ff7f50, #ff4500);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 1px 4px 16px rgba(0, 0, 0, 0.6);
+}
+.floating-menu:hover {
+    transform: scale(1.1);
+    background: linear-gradient(135deg, #ff4500, #ff7f50);
+}
+.floating-menu img {
+    width: 40px;
+    height: 40px;
+}
+.floating-text {
+    position: absolute;
+    bottom: -4px;
+    background: linear-gradient(135deg, #ff7f50, #ff4500);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 12px;
+    white-space: nowrap;
+    transition: opacity 0.3s ease-in-out;
+}
+.floating-menu:hover .floating-text {
+    opacity: 1;
+}
 
 img {
     width: 30px;
@@ -133,38 +172,28 @@ main section.content__menu {
     position: relative;
     display: flex;
     padding: 1em;
+    padding-bottom: 0;
     align-items: center;
     justify-content: center;
     /* background-color: #fff; */
 }
 
 .menu__item a.active {
-    background-color: #007bff2f; /* Warna latar belakang saat aktif */
+    background: linear-gradient(135deg, #ff7f50, #ff4500);
     color: white; /* Warna teks saat aktif */
     border-radius: 6px;
-    padding: 30px 10px;
+    padding: 10px 10px;
 }
 
 main section.content__menu ul.menu__list {
-    /* display: flex;
-    gap: 0.5em; */
-    /* justify-content: flex-start;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* grid-template-rows: repeat(2, auto); */
+    gap: 10px;
+    width: 100%;
+    justify-content: center;
     align-items: center;
-    justify-content: center; */
-
-    /* overflow-x: auto; 
-    white-space: nowrap; 
-    scrollbar-width: thin; 
-    -webkit-overflow-scrolling: touch; 
-    scrollbar-width: none;
-    max-width: 100%;
-    scroll-snap-type: x mandatory; */
-    display: flex;
-    gap: 0.1em;
-    overflow-x: auto;
-    scroll-behavior: smooth;
-    white-space: nowrap;
-    max-width: 75%;
+    padding: 10px;
 
 }
 main section.content__menu ul.menu__list::-webkit-scrollbar {
@@ -173,11 +202,12 @@ main section.content__menu ul.menu__list::-webkit-scrollbar {
 
 main section.content__menu div.menu__wrapper {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     position: relative;
 }
-.scroll-left, .scroll-right {
+/* .scroll-left, .scroll-right {
     background-color: rgba(0, 0, 0, 0.137);
     color: white;
     border: none;
@@ -187,7 +217,7 @@ main section.content__menu div.menu__wrapper {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-}
+} */
 
 .scroll-left {
     left: 30px;
@@ -201,19 +231,24 @@ main section.content__menu div.menu__wrapper {
 }
 
 main section.content__menu ul.menu__list li.menu__item {
-    width: 100%;
-    height: 65px;
-    padding: 5px;
-    /* background-color: #ddd; */
-    border-radius: 5px;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    -ms-border-radius: 5px;
-    -o-border-radius: 5px;
-
-    flex: 0 0 calc(25% - 0.5em); /* Menampilkan 4 menu dalam satu baris */
+    display: flex;
+    cursor: pointer;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     text-align: center;
-    scroll-snap-align: start;
+    background-color: #f5f5f5; /* Warna latar belakang saat aktif */
+    color: white; /* Warna teks saat aktif */
+    border-radius: 10px;
+    padding: 10px 10px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+main section.content__menu ul.menu__list li.menu__item:nth-child(5) { /* Loker */
+    grid-column: 2 / 3; /* Mulai dari kolom ke-2 */
+}
+
+main section.content__menu ul.menu__list li.menu__item:nth-child(6) { /* Nunuters */
+    grid-column: 3 / 4; /* Mulai dari kolom ke-3 */
 }
 
 main section.content__menu ul.menu__list li.menu__item a {
@@ -226,6 +261,10 @@ main section.content__menu ul.menu__list li.menu__item a {
     color: #000;
     font-size: 0.9em;
     font-weight: 500;
+}
+main section.content__menu ul.menu__list li.menu__item a img {
+    width: 30px;
+    height: 30px;
 }
 
 main section.content__container {

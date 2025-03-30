@@ -17,7 +17,21 @@
         <!-- <div class="cardHeader">
             <h2>NUNUTERS</h2>
           </div> -->
+        <!-- <a href="/User.html">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+            stroke-width="1.5" stroke="currentColor" class="size-6">
+            <path stroke-linecap="round" stroke-linejoin="round"
+                d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
+        </svg>
+        </a> -->
         <div class="forum-tabs">
+            <a href="/User.html" class="back-button">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                    stroke-width="1.5" stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
+                </svg>
+            </a>
           <button class="tab-button active" onclick="openTab('left')">
             Forum Update
           </button>
@@ -30,21 +44,26 @@
           <!-- Forum Kiri: Beranda Postingan -->
           <div id="forum-left" class="forum-left">
             <div class="feed-header">
-              <h2>Update</h2>
+              <h2>Postingan Terkini</h2>
             </div>
             <div class="post-form">
-              <img
-                src="assets/imgs/logo.png"
-                alt="User Profile"
-                class="post-icon"
-              />
+                <div class="avatar">
+                  <img
+                    src="assets/imgs/logo.png"
+                    alt="User Profile"
+                    class="post-icon"
+                  />
+                <h3>Admin</h3>
+              </div>
               <textarea placeholder="Apa yang Anda pikirkan?"></textarea>
-              <label for="image-upload" class="image-button">
-                <i class="fas fa-image"></i>
-                <!-- Icon upload gambar di kanan -->
-              </label>
+              <div class="posting">
+                  <label for="image-upload" class="image-button">
+                    <i class="fas fa-image"></i>
+                    <!-- Icon upload gambar di kanan -->
+                  </label>
               <input type="file" id="image-upload" style="display: none" />
               <button>Posting</button>
+            </div>
             </div>
             <div class="post-list">
               <div class="post-item">
@@ -65,9 +84,6 @@
                   </button>
                   <button class="far fa-comment">
                     <span style="text-transform: capitalize">Komentar</span>
-                  </button>
-                  <button class="fab fa-whatsapp">
-                    <span style="text-transform: capitalize">Kirim</span>
                   </button>
                   <button class="fas fa-share">
                     <span style="text-transform: capitalize">share</span>
@@ -99,9 +115,6 @@
                   <button class="far fa-comment">
                     <span style="text-transform: capitalize">Komentar</span>
                   </button>
-                  <button class="fab fa-whatsapp">
-                    <span style="text-transform: capitalize">Kirim</span>
-                  </button>
                   <button class="fas fa-share">
                     <span style="text-transform: capitalize">share</span>
                   </button>
@@ -131,9 +144,6 @@
                   <button class="far fa-comment">
                     <span style="text-transform: capitalize">Komentar</span>
                   </button>
-                  <button class="fab fa-whatsapp">
-                    <span style="text-transform: capitalize">Kirim</span>
-                  </button>
                   <button class="fas fa-share">
                     <span style="text-transform: capitalize">share</span>
                   </button>
@@ -160,9 +170,6 @@
                   </button>
                   <button class="far fa-comment">
                     <span style="text-transform: capitalize">Komentar</span>
-                  </button>
-                  <button class="fab fa-whatsapp">
-                    <span style="text-transform: capitalize">Kirim</span>
                   </button>
                   <button class="fas fa-share">
                     <span style="text-transform: capitalize">share</span>
@@ -191,9 +198,6 @@
                   <button class="far fa-comment">
                     <span style="text-transform: capitalize">Komentar</span>
                   </button>
-                  <button class="fab fa-whatsapp">
-                    <span style="text-transform: capitalize">Kirim</span>
-                  </button>
                   <button class="fas fa-share">
                     <span style="text-transform: capitalize">share</span>
                   </button>
@@ -218,9 +222,6 @@
                   <button class="far fa-comment">
                     <span style="text-transform: capitalize">Komentar</span>
                   </button>
-                  <button class="fab fa-whatsapp">
-                    <span style="text-transform: capitalize">Kirim</span>
-                  </button>
                   <button class="fas fa-share">
                     <span style="text-transform: capitalize">share</span>
                   </button>
@@ -233,7 +234,7 @@
           <div id="forum-right" class="forum-right hidden">
             <div class="chat-container">
               <div class="chat-header">
-                <h2>Forum Chat</h2>
+                <h2>Chat Terkini</h2>
               </div>
               <div class="chat-message">
                 <ul class="chat-message-list">
@@ -260,11 +261,9 @@
                     </p>
                   </li>
                   <li class="chat-message-item right">
-                    <span class="chat-username">Aku:</span>
                     <p>Yuk ke Pantai Parangtritis!</p>
                   </li>
                   <li class="chat-message-item right">
-                    <span class="chat-username">Aku:</span>
                     <p>Ada yang tahu tempat makan enak di Jogja?</p>
                   </li>
                   <li class="chat-message-item left">
@@ -279,7 +278,6 @@
                     </p>
                   </li>
                   <li class="chat-message-item right">
-                    <span class="chat-username">Aku:</span>
                     <p>Setuju! Atau bisa coba Sate Klathak juga 🍢</p>
                   </li>
                   <li class="chat-message-item left">
@@ -294,7 +292,6 @@
                     </p>
                   </li>
                   <li class="chat-message-item right">
-                    <span class="chat-username">Aku:</span>
                     <p>Aku ikut! Ada itinerary-nya?</p>
                   </li>
                   <li class="chat-message-item left">

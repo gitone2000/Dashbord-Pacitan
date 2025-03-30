@@ -10,7 +10,7 @@
     max-width: 400px;
     margin: auto;
     background: white;
-    
+    height: 100%;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
@@ -28,7 +28,8 @@
   .inside-forum {
     background: var(--white);
     border-radius: 10px;
-    padding: 20px;
+    height: 100%;
+    padding-top: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     transition: 0.3s ease-in-out;
   }
@@ -58,9 +59,12 @@
   /* Layout utama */
   body {
     font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    display: flex;
+    /* margin: 0;
+    padding: 0; */
+    width: 100%;
+    /* height: 100vh; */
+    /* overflow: hidden; */
+    /* display: flex; */
     justify-content: center;
     background: #f0f2f5;
   }
@@ -76,18 +80,23 @@
     padding: 15px;
     border: 1px solid #ddd; /* Border tambahan */
     overflow-y: auto;
-    max-height: 500px; /* Agar bisa scroll jika banyak konten */
+    /* max-height: 500px; */
   }
   .forum-left {
-    flex: 1;
+    /* flex: 1; */
+    height: 100%;
     margin-right: 20px;
     color: white;
     background: var(--blue);
   }
   .forum-right {
-    flex: 1;
+    /* flex: 1; */
+    height: 100%;
+    min-height: calc(100vh - 32px);
     color: white;
     background: var(--blue);
+    overflow: hidden;
+    /* overflow: hidden; */
   }
   .feed-header {
     font-size: 1em;
@@ -104,6 +113,12 @@
     margin-bottom: 20px;
     height: 50px;
   }
+  .post-form .avatar{
+    display: flex;
+    color: #000;
+    align-items: center;
+    font-size: 15px;
+  }
   .post-form textarea {
     flex: 1;
     height: 40px;
@@ -114,15 +129,37 @@
     font-size: 14px;
     align-content: center;
     border-radius: 5px;
+    margin-bottom: 10px;
   }
-  .post-form button {
+  .post-form .posting{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .post-form .posting label{
+    width: 30px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    >i {
+        width: 100%;
+        height: 100%;
+    }
+  }
+  .post-form .posting button {
+    /* flex-grow: 1; */
+    width: 100%;
+    height: 100%;
     background: #007bff;
     color: white;
     border: none;
-    padding: 8px 12px;
+    padding: 4.5px 12px;
     border-radius: 5px;
-    margin-left: 10px;
+    /* margin-left: 10px; */
     cursor: pointer;
+    margin: 0;
   }
   .post-icon {
     width: 35px;
@@ -191,10 +228,12 @@
   
   .post-actions {
     display: flex;
-    gap: 30px; /* Jarak antar tombol */
+    gap: 20px; /* Jarak antar tombol */
   }
   
   .post-actions button {
+    /* flex: 1; */
+    /* flex-grow: 1; */
     margin-top: 6px;
     background: none;
     border: none;
@@ -208,15 +247,19 @@
   }
   .chat-container {
     display: flex;
+    height: 100%;
     flex-direction: column;
   }
   .chat-header {
     font-size: 1em;
     margin-bottom: 10px;
+    color: #000;
   }
   .chat-message {
     flex-grow: 1;
-    height: 383px; /* Ditinggikan agar lebih banyak chat */
+    height: 100%;
+    min-height: 100vh; 
+    /* Ditinggikan agar lebih banyak chat */
     overflow-y: auto;
     background: #001749;
     padding: 10px;
@@ -317,8 +360,9 @@
   /* styling tabs */
   .forum-tabs {
     display: flex;
-    justify-content: center;
+    justify-content: start;
     margin-bottom: 10px;
+    margin-left: 10px;
   }
   
   .tab-button {
@@ -344,6 +388,27 @@
   .hidden {
     display: none;
   }
+  .back-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    background: #007bff;
+    border-radius: 50%;
+    transition: background 0.3s ease-in-out;
+    margin-right: 18px;
+}
+
+.back-button svg {
+    width: 24px;
+    height: 24px;
+    stroke: white;
+}
+
+.back-button:hover {
+    background: #e03e00;
+}
 
 
   @media screen and (max-width: 768px) {
