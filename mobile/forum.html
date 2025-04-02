@@ -96,9 +96,9 @@
             </ul>
         </section>
         <section class="forum">
-            <ul class="forum-list">
+            <ul class="forum-list" id="forum">
                 <li class="forum-item" id="pariwisata">
-                    <div class="chat-container">
+                    <div class="chat-container" id="chatContainer">
                         <div class="chat-header">
                             <button class="back-button" onclick=backButton()>
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
@@ -112,7 +112,7 @@
                                     alt="beach" />
                             </span>
                             <h1>Pariwisata</h1>
-                            <button class="info-online">
+                            <button class="info-online" onclick=showOnline()>
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                     stroke-width="1.5" stroke="currentColor" class="size-6">
                                     <path stroke-linecap="round" stroke-linejoin="round"
@@ -120,6 +120,77 @@
                                 </svg>
                                 <p>Online</p>
                             </button>
+                        </div>
+                        <div class="show-online">
+                            <div class="show-online-header">
+                                <button onclick=hiddenOnline()>
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                        stroke-width="1.5" stroke="currentColor" class="size-6">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                                    </svg>
+
+                                </button>
+                                <h1>Anggota</h1>
+                                <input type="text" placeholder="Cari member disini...">
+                            </div>
+                            <ul class="show-online-list">
+                                <li class="show-online-item">
+                                    <span>
+                                        <img src="/assets/imgs/customer01.jpg" alt="">
+                                    </span>
+                                    <h3>Wawan</h3>
+                                    <p>Online</p>
+                                </li>
+                                <li class="show-online-item">
+                                    <span>
+                                        <img src="/assets/imgs/customer01.jpg" alt="">
+                                    </span>
+                                    <h3>Wawan</h3>
+                                    <p>Online</p>
+                                </li>
+                                <li class="show-online-item">
+                                    <span>
+                                        <img src="/assets/imgs/customer01.jpg" alt="">
+                                    </span>
+                                    <h3>Wawan</h3>
+                                    <p>Online</p>
+                                </li>
+                                <li class="show-online-item">
+                                    <span>
+                                        <img src="/assets/imgs/customer01.jpg" alt="">
+                                    </span>
+                                    <h3>Wawan</h3>
+                                    <p>Online</p>
+                                </li>
+                                <li class="show-online-item">
+                                    <span>
+                                        <img src="/assets/imgs/customer01.jpg" alt="">
+                                    </span>
+                                    <h3>Wawan</h3>
+                                    <p>Online</p>
+                                </li>
+                                <li class="show-online-item">
+                                    <span>
+                                        <img src="/assets/imgs/customer01.jpg" alt="">
+                                    </span>
+                                    <h3>Wawan</h3>
+                                    <p>Online</p>
+                                </li>
+                                <li class="show-online-item">
+                                    <span>
+                                        <img src="/assets/imgs/customer01.jpg" alt="">
+                                    </span>
+                                    <h3>Wawan</h3>
+                                    <p>Online</p>
+                                </li>
+                                <li class="show-online-item">
+                                    <span>
+                                        <img src="/assets/imgs/customer01.jpg" alt="">
+                                    </span>
+                                    <h3>Wawan</h3>
+                                    <p>Online</p>
+                                </li>
+                            </ul>
                         </div>
                         <div class="chat-message">
                             <div class="chat-user">
@@ -234,7 +305,7 @@
                                     alt="permanent-job" />
                             </span>
                             <h1>Lowongan Pekerjaan</h1>
-                            <button class="info-online">
+                            <button class="info-online" onclick=showOnline()>
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                     stroke-width="1.5" stroke="currentColor" class="size-6">
                                     <path stroke-linecap="round" stroke-linejoin="round"
@@ -242,6 +313,77 @@
                                 </svg>
                                 <p>Online</p>
                             </button>
+                        </div>
+                        <div class="show-online">
+                            <div class="show-online-header">
+                                <button onclick=hiddenOnline()>
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                        stroke-width="1.5" stroke="currentColor" class="size-6">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                                    </svg>
+
+                                </button>
+                                <h1>Anggota</h1>
+                                <input type="text" placeholder="Cari member disini...">
+                            </div>
+                            <ul class="show-online-list">
+                                <li class="show-online-item">
+                                    <span>
+                                        <img src="/assets/imgs/customer01.jpg" alt="">
+                                    </span>
+                                    <h3>Wawan</h3>
+                                    <p>Online</p>
+                                </li>
+                                <li class="show-online-item">
+                                    <span>
+                                        <img src="/assets/imgs/customer01.jpg" alt="">
+                                    </span>
+                                    <h3>Wawan</h3>
+                                    <p>Online</p>
+                                </li>
+                                <li class="show-online-item">
+                                    <span>
+                                        <img src="/assets/imgs/customer01.jpg" alt="">
+                                    </span>
+                                    <h3>Wawan</h3>
+                                    <p>Online</p>
+                                </li>
+                                <li class="show-online-item">
+                                    <span>
+                                        <img src="/assets/imgs/customer01.jpg" alt="">
+                                    </span>
+                                    <h3>Wawan</h3>
+                                    <p>Online</p>
+                                </li>
+                                <li class="show-online-item">
+                                    <span>
+                                        <img src="/assets/imgs/customer01.jpg" alt="">
+                                    </span>
+                                    <h3>Wawan</h3>
+                                    <p>Online</p>
+                                </li>
+                                <li class="show-online-item">
+                                    <span>
+                                        <img src="/assets/imgs/customer01.jpg" alt="">
+                                    </span>
+                                    <h3>Wawan</h3>
+                                    <p>Online</p>
+                                </li>
+                                <li class="show-online-item">
+                                    <span>
+                                        <img src="/assets/imgs/customer01.jpg" alt="">
+                                    </span>
+                                    <h3>Wawan</h3>
+                                    <p>Online</p>
+                                </li>
+                                <li class="show-online-item">
+                                    <span>
+                                        <img src="/assets/imgs/customer01.jpg" alt="">
+                                    </span>
+                                    <h3>Wawan</h3>
+                                    <p>Online</p>
+                                </li>
+                            </ul>
                         </div>
                         <div class="chat-message">
                             <div class="chat-user">
@@ -356,7 +498,7 @@
                                     alt="student-center" />
                             </span>
                             <h1>Mahasiswa</h1>
-                            <button class="info-online">
+                            <button class="info-online" onclick=showOnline()>
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                     stroke-width="1.5" stroke="currentColor" class="size-6">
                                     <path stroke-linecap="round" stroke-linejoin="round"
@@ -364,6 +506,77 @@
                                 </svg>
                                 <p>Online</p>
                             </button>
+                        </div>
+                        <div class="show-online">
+                            <div class="show-online-header">
+                                <button onclick=hiddenOnline()>
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                        stroke-width="1.5" stroke="currentColor" class="size-6">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                                    </svg>
+
+                                </button>
+                                <h1>Anggota</h1>
+                                <input type="text" placeholder="Cari member disini...">
+                            </div>
+                            <ul class="show-online-list">
+                                <li class="show-online-item">
+                                    <span>
+                                        <img src="/assets/imgs/customer01.jpg" alt="">
+                                    </span>
+                                    <h3>Wawan</h3>
+                                    <p>Online</p>
+                                </li>
+                                <li class="show-online-item">
+                                    <span>
+                                        <img src="/assets/imgs/customer01.jpg" alt="">
+                                    </span>
+                                    <h3>Wawan</h3>
+                                    <p>Online</p>
+                                </li>
+                                <li class="show-online-item">
+                                    <span>
+                                        <img src="/assets/imgs/customer01.jpg" alt="">
+                                    </span>
+                                    <h3>Wawan</h3>
+                                    <p>Online</p>
+                                </li>
+                                <li class="show-online-item">
+                                    <span>
+                                        <img src="/assets/imgs/customer01.jpg" alt="">
+                                    </span>
+                                    <h3>Wawan</h3>
+                                    <p>Online</p>
+                                </li>
+                                <li class="show-online-item">
+                                    <span>
+                                        <img src="/assets/imgs/customer01.jpg" alt="">
+                                    </span>
+                                    <h3>Wawan</h3>
+                                    <p>Online</p>
+                                </li>
+                                <li class="show-online-item">
+                                    <span>
+                                        <img src="/assets/imgs/customer01.jpg" alt="">
+                                    </span>
+                                    <h3>Wawan</h3>
+                                    <p>Online</p>
+                                </li>
+                                <li class="show-online-item">
+                                    <span>
+                                        <img src="/assets/imgs/customer01.jpg" alt="">
+                                    </span>
+                                    <h3>Wawan</h3>
+                                    <p>Online</p>
+                                </li>
+                                <li class="show-online-item">
+                                    <span>
+                                        <img src="/assets/imgs/customer01.jpg" alt="">
+                                    </span>
+                                    <h3>Wawan</h3>
+                                    <p>Online</p>
+                                </li>
+                            </ul>
                         </div>
                         <div class="chat-message">
                             <div class="chat-user">
@@ -479,7 +692,7 @@
                                     alt="external-cultures-archaeology-flaticons-flat-flat-icons" />
                             </span>
                             <h1>Budaya</h1>
-                            <button class="info-online">
+                            <button class="info-online" onclick=showOnline()>
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                     stroke-width="1.5" stroke="currentColor" class="size-6">
                                     <path stroke-linecap="round" stroke-linejoin="round"
@@ -573,6 +786,77 @@
                                     </div>
                                 </div>
                             </div>
+                        </div>
+                        <div class="show-online">
+                            <div class="show-online-header">
+                                <button onclick=hiddenOnline()>
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                        stroke-width="1.5" stroke="currentColor" class="size-6">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                                    </svg>
+
+                                </button>
+                                <h1>Anggota</h1>
+                                <input type="text" placeholder="Cari member disini...">
+                            </div>
+                            <ul class="show-online-list">
+                                <li class="show-online-item">
+                                    <span>
+                                        <img src="/assets/imgs/customer01.jpg" alt="">
+                                    </span>
+                                    <h3>Wawan</h3>
+                                    <p>Online</p>
+                                </li>
+                                <li class="show-online-item">
+                                    <span>
+                                        <img src="/assets/imgs/customer01.jpg" alt="">
+                                    </span>
+                                    <h3>Wawan</h3>
+                                    <p>Online</p>
+                                </li>
+                                <li class="show-online-item">
+                                    <span>
+                                        <img src="/assets/imgs/customer01.jpg" alt="">
+                                    </span>
+                                    <h3>Wawan</h3>
+                                    <p>Online</p>
+                                </li>
+                                <li class="show-online-item">
+                                    <span>
+                                        <img src="/assets/imgs/customer01.jpg" alt="">
+                                    </span>
+                                    <h3>Wawan</h3>
+                                    <p>Online</p>
+                                </li>
+                                <li class="show-online-item">
+                                    <span>
+                                        <img src="/assets/imgs/customer01.jpg" alt="">
+                                    </span>
+                                    <h3>Wawan</h3>
+                                    <p>Online</p>
+                                </li>
+                                <li class="show-online-item">
+                                    <span>
+                                        <img src="/assets/imgs/customer01.jpg" alt="">
+                                    </span>
+                                    <h3>Wawan</h3>
+                                    <p>Online</p>
+                                </li>
+                                <li class="show-online-item">
+                                    <span>
+                                        <img src="/assets/imgs/customer01.jpg" alt="">
+                                    </span>
+                                    <h3>Wawan</h3>
+                                    <p>Online</p>
+                                </li>
+                                <li class="show-online-item">
+                                    <span>
+                                        <img src="/assets/imgs/customer01.jpg" alt="">
+                                    </span>
+                                    <h3>Wawan</h3>
+                                    <p>Online</p>
+                                </li>
+                            </ul>
                         </div>
                         <div class="chat-message-input">
                             <input type="text" placeholder="Tulis pesan anda...">
@@ -601,7 +885,7 @@
                                     alt="turkey-stuffing" />
                             </span>
                             <h1>Kuliner</h1>
-                            <button class="info-online">
+                            <button class="info-online" onclick=showOnline()>
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                     stroke-width="1.5" stroke="currentColor" class="size-6">
                                     <path stroke-linecap="round" stroke-linejoin="round"
@@ -695,6 +979,77 @@
                                     </div>
                                 </div>
                             </div>
+                        </div>
+                        <div class="show-online">
+                            <div class="show-online-header">
+                                <button onclick=hiddenOnline()>
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                        stroke-width="1.5" stroke="currentColor" class="size-6">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                                    </svg>
+
+                                </button>
+                                <h1>Anggota</h1>
+                                <input type="text" placeholder="Cari member disini...">
+                            </div>
+                            <ul class="show-online-list">
+                                <li class="show-online-item">
+                                    <span>
+                                        <img src="/assets/imgs/customer01.jpg" alt="">
+                                    </span>
+                                    <h3>Wawan</h3>
+                                    <p>Online</p>
+                                </li>
+                                <li class="show-online-item">
+                                    <span>
+                                        <img src="/assets/imgs/customer01.jpg" alt="">
+                                    </span>
+                                    <h3>Wawan</h3>
+                                    <p>Online</p>
+                                </li>
+                                <li class="show-online-item">
+                                    <span>
+                                        <img src="/assets/imgs/customer01.jpg" alt="">
+                                    </span>
+                                    <h3>Wawan</h3>
+                                    <p>Online</p>
+                                </li>
+                                <li class="show-online-item">
+                                    <span>
+                                        <img src="/assets/imgs/customer01.jpg" alt="">
+                                    </span>
+                                    <h3>Wawan</h3>
+                                    <p>Online</p>
+                                </li>
+                                <li class="show-online-item">
+                                    <span>
+                                        <img src="/assets/imgs/customer01.jpg" alt="">
+                                    </span>
+                                    <h3>Wawan</h3>
+                                    <p>Online</p>
+                                </li>
+                                <li class="show-online-item">
+                                    <span>
+                                        <img src="/assets/imgs/customer01.jpg" alt="">
+                                    </span>
+                                    <h3>Wawan</h3>
+                                    <p>Online</p>
+                                </li>
+                                <li class="show-online-item">
+                                    <span>
+                                        <img src="/assets/imgs/customer01.jpg" alt="">
+                                    </span>
+                                    <h3>Wawan</h3>
+                                    <p>Online</p>
+                                </li>
+                                <li class="show-online-item">
+                                    <span>
+                                        <img src="/assets/imgs/customer01.jpg" alt="">
+                                    </span>
+                                    <h3>Wawan</h3>
+                                    <p>Online</p>
+                                </li>
+                            </ul>
                         </div>
                         <div class="chat-message-input">
                             <input type="text" placeholder="Tulis pesan anda...">
@@ -724,7 +1079,7 @@
 
                             </span>
                             <h1>Umum</h1>
-                            <button class="info-online">
+                            <button class="info-online" onclick=showOnline()>
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                     stroke-width="1.5" stroke="currentColor" class="size-6">
                                     <path stroke-linecap="round" stroke-linejoin="round"
@@ -732,6 +1087,77 @@
                                 </svg>
                                 <p>Online</p>
                             </button>
+                        </div>
+                        <div class="show-online">
+                            <div class="show-online-header">
+                                <button onclick=hiddenOnline()>
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                        stroke-width="1.5" stroke="currentColor" class="size-6">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                                    </svg>
+
+                                </button>
+                                <h1>Anggota</h1>
+                                <input type="text" placeholder="Cari member disini...">
+                            </div>
+                            <ul class="show-online-list">
+                                <li class="show-online-item">
+                                    <span>
+                                        <img src="/assets/imgs/customer01.jpg" alt="">
+                                    </span>
+                                    <h3>Wawan</h3>
+                                    <p>Online</p>
+                                </li>
+                                <li class="show-online-item">
+                                    <span>
+                                        <img src="/assets/imgs/customer01.jpg" alt="">
+                                    </span>
+                                    <h3>Wawan</h3>
+                                    <p>Online</p>
+                                </li>
+                                <li class="show-online-item">
+                                    <span>
+                                        <img src="/assets/imgs/customer01.jpg" alt="">
+                                    </span>
+                                    <h3>Wawan</h3>
+                                    <p>Online</p>
+                                </li>
+                                <li class="show-online-item">
+                                    <span>
+                                        <img src="/assets/imgs/customer01.jpg" alt="">
+                                    </span>
+                                    <h3>Wawan</h3>
+                                    <p>Online</p>
+                                </li>
+                                <li class="show-online-item">
+                                    <span>
+                                        <img src="/assets/imgs/customer01.jpg" alt="">
+                                    </span>
+                                    <h3>Wawan</h3>
+                                    <p>Online</p>
+                                </li>
+                                <li class="show-online-item">
+                                    <span>
+                                        <img src="/assets/imgs/customer01.jpg" alt="">
+                                    </span>
+                                    <h3>Wawan</h3>
+                                    <p>Online</p>
+                                </li>
+                                <li class="show-online-item">
+                                    <span>
+                                        <img src="/assets/imgs/customer01.jpg" alt="">
+                                    </span>
+                                    <h3>Wawan</h3>
+                                    <p>Online</p>
+                                </li>
+                                <li class="show-online-item">
+                                    <span>
+                                        <img src="/assets/imgs/customer01.jpg" alt="">
+                                    </span>
+                                    <h3>Wawan</h3>
+                                    <p>Online</p>
+                                </li>
+                            </ul>
                         </div>
                         <div class="chat-message">
                             <div class="chat-user">

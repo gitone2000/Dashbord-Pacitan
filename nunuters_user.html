@@ -1,37 +1,36 @@
 <!DOCTYPE html>
 <html lang="id">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>NUNUTERS Forum</title>
-    <link rel="stylesheet" href="assets/css/nunuters_user.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <script
-      src="https://kit.fontawesome.com/a076d05399.js"
-      crossorigin="anonymous"
-    ></script>
-  </head>
-  <body>
-    <div class="forum">
-      <div class="inside-forum">
-        <!-- <div class="cardHeader">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NUNUTERS Forum</title>
+  <link rel="stylesheet" href="assets/css/nunuters_user.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div class="forum">
+    <div class="inside-forum">
+      <!-- <div class="cardHeader">
             <h2>NUNUTERS</h2>
           </div> -->
-        <!-- <a href="/User.html">
+      <!-- <a href="/User.html">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
             stroke-width="1.5" stroke="currentColor" class="size-6">
             <path stroke-linecap="round" stroke-linejoin="round"
                 d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
         </svg>
         </a> -->
-        <div class="forum-tabs">
-            <a href="/User.html" class="back-button">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                    stroke-width="1.5" stroke="currentColor" class="size-6">
-                    <path stroke-linecap="round" stroke-linejoin="round"
-                        d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
-                </svg>
-            </a>
+      <div class="forum-tabs">
+        <a href="/User.html" class="back-button">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor" class="size-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
+          </svg>
+        </a>
+        <div class="button-tab">
           <button class="tab-button active" onclick="openTab('left')">
             Forum Update
           </button>
@@ -39,292 +38,262 @@
             Forum Chat
           </button>
         </div>
-        <!-- Konten halaman -->
-        <div class="forum-item">
-          <!-- Forum Kiri: Beranda Postingan -->
-          <div id="forum-left" class="forum-left">
-            <div class="feed-header">
-              <h2>Postingan Terkini</h2>
+      </div>
+      <!-- Konten halaman -->
+      <div class="forum-item">
+        <!-- Forum Kiri: Beranda Postingan -->
+        <div id="forum-left" class="forum-left">
+          <div class="feed-header">
+            <h2>Postingan Terkini</h2>
+          </div>
+          <div class="post-form">
+            <div class="avatar">
+              <img src="assets/imgs/logo.png" alt="User Profile" class="post-icon" />
+              <h3>Admin</h3>
             </div>
-            <div class="post-form">
-                <div class="avatar">
-                  <img
-                    src="assets/imgs/logo.png"
-                    alt="User Profile"
-                    class="post-icon"
-                  />
-                <h3>Admin</h3>
-              </div>
-              <textarea placeholder="Apa yang Anda pikirkan?"></textarea>
-              <div class="posting">
-                  <label for="image-upload" class="image-button">
-                    <i class="fas fa-image"></i>
-                    <!-- Icon upload gambar di kanan -->
-                  </label>
+            <textarea placeholder="Apa yang Anda pikirkan?"></textarea>
+            <div class="posting">
+              <label for="image-upload" class="image-button">
+                <i class="fas fa-image"></i>
+                <!-- Icon upload gambar di kanan -->
+              </label>
               <input type="file" id="image-upload" style="display: none" />
               <button>Posting</button>
             </div>
+          </div>
+          <div class="post-list">
+            <div class="post-item">
+              <div class="post-user">
+                <img src="assets/imgs/customer01.jpg" alt="User Profile" />
+                <div>
+                  <h3 class="username">Wawan</h3>
+                  <!-- Nama Pengguna -->
+                  <span>2 jam yang lalu</span>
+                </div>
+              </div>
+              <p>
+                Senang banget akhirnya bisa nonton konser idola semalam! 🤩
+              </p>
+              <div class="post-actions">
+                <button class="far fa-thumbs-up">
+                  <span style="text-transform: capitalize">Like</span>
+                </button>
+                <button class="far fa-comment">
+                  <span style="text-transform: capitalize">Komentar</span>
+                </button>
+                <button class="fas fa-share">
+                  <span style="text-transform: capitalize">share</span>
+                </button>
+              </div>
             </div>
-            <div class="post-list">
-              <div class="post-item">
-                <div class="post-user">
-                  <img src="assets/imgs/customer01.jpg" alt="User Profile" />
-                  <div>
-                    <h3 class="username">Wawan</h3>
-                    <!-- Nama Pengguna -->
-                    <span>2 jam yang lalu</span>
-                  </div>
-                </div>
-                <p>
-                  Senang banget akhirnya bisa nonton konser idola semalam! 🤩
-                </p>
-                <div class="post-actions">
-                  <button class="far fa-thumbs-up">
-                    <span style="text-transform: capitalize">Like</span>
-                  </button>
-                  <button class="far fa-comment">
-                    <span style="text-transform: capitalize">Komentar</span>
-                  </button>
-                  <button class="fas fa-share">
-                    <span style="text-transform: capitalize">share</span>
-                  </button>
+
+            <div class="post-item">
+              <div class="post-user">
+                <img src="assets/imgs/customer01.jpg" alt="User Profile" />
+                <div>
+                  <h3 class="username">Wawan</h3>
+                  <span>10 menit yang lalu</span>
                 </div>
               </div>
+              <p>
+                Hari ini cuacanya cerah banget! Cocok buat jalan-jalan ke
+                pantai.
+              </p>
+              <img src="assets/imgs/wisata/pantai1.jpg" alt="Pantai Cerah" class="post-image" />
+              <div class="post-actions">
+                <button class="far fa-thumbs-up">
+                  <span style="text-transform: capitalize">Like</span>
+                </button>
+                <button class="far fa-comment">
+                  <span style="text-transform: capitalize">Komentar</span>
+                </button>
+                <button class="fas fa-share">
+                  <span style="text-transform: capitalize">share</span>
+                </button>
+              </div>
+            </div>
 
-              <div class="post-item">
-                <div class="post-user">
-                  <img src="assets/imgs/customer01.jpg" alt="User Profile" />
-                  <div>
-                    <h3 class="username">Wawan</h3>
-                    <span>10 menit yang lalu</span>
-                  </div>
-                </div>
-                <p>
-                  Hari ini cuacanya cerah banget! Cocok buat jalan-jalan ke
-                  pantai.
-                </p>
-                <img
-                  src="assets/imgs/wisata/pantai1.jpg"
-                  alt="Pantai Cerah"
-                  class="post-image"
-                />
-                <div class="post-actions">
-                  <button class="far fa-thumbs-up">
-                    <span style="text-transform: capitalize">Like</span>
-                  </button>
-                  <button class="far fa-comment">
-                    <span style="text-transform: capitalize">Komentar</span>
-                  </button>
-                  <button class="fas fa-share">
-                    <span style="text-transform: capitalize">share</span>
-                  </button>
+            <div class="post-item">
+              <div class="post-user">
+                <img src="assets/imgs/customer02.jpg" alt="User Profile" />
+                <div>
+                  <h3 class="username">Andi</h3>
+                  <span>30 menit yang lalu</span>
                 </div>
               </div>
+              <p>
+                Siapa yang mau ikut trip ke Bromo minggu depan? Info di DM ya!
+              </p>
+              <img src="assets/imgs/goagong.jpg" alt="Bromo" class="post-image" />
+              <div class="post-actions">
+                <button class="far fa-thumbs-up">
+                  <span style="text-transform: capitalize">Like</span>
+                </button>
+                <button class="far fa-comment">
+                  <span style="text-transform: capitalize">Komentar</span>
+                </button>
+                <button class="fas fa-share">
+                  <span style="text-transform: capitalize">share</span>
+                </button>
+              </div>
+            </div>
 
-              <div class="post-item">
-                <div class="post-user">
-                  <img src="assets/imgs/customer02.jpg" alt="User Profile" />
-                  <div>
-                    <h3 class="username">Andi</h3>
-                    <span>30 menit yang lalu</span>
-                  </div>
-                </div>
-                <p>
-                  Siapa yang mau ikut trip ke Bromo minggu depan? Info di DM ya!
-                </p>
-                <img
-                  src="assets/imgs/goagong.jpg"
-                  alt="Bromo"
-                  class="post-image"
-                />
-                <div class="post-actions">
-                  <button class="far fa-thumbs-up">
-                    <span style="text-transform: capitalize">Like</span>
-                  </button>
-                  <button class="far fa-comment">
-                    <span style="text-transform: capitalize">Komentar</span>
-                  </button>
-                  <button class="fas fa-share">
-                    <span style="text-transform: capitalize">share</span>
-                  </button>
+            <div class="post-item">
+              <div class="post-user">
+                <img src="assets/imgs/customer02.jpg" alt="User Profile" />
+                <div>
+                  <h3 class="username">Andi</h3>
+                  <span>5 menit yang lalu</span>
                 </div>
               </div>
+              <p>Ada yang punya rekomendasi tempat makan enak di kota?</p>
+              <img src="assets/imgs/makanan.jpg" alt="Bromo" class="post-image" />
+              <div class="post-actions">
+                <button class="far fa-thumbs-up">
+                  <span style="text-transform: capitalize">Like</span>
+                </button>
+                <button class="far fa-comment">
+                  <span style="text-transform: capitalize">Komentar</span>
+                </button>
+                <button class="fas fa-share">
+                  <span style="text-transform: capitalize">share</span>
+                </button>
+              </div>
+            </div>
 
-              <div class="post-item">
-                <div class="post-user">
-                  <img src="assets/imgs/customer02.jpg" alt="User Profile" />
-                  <div>
-                    <h3 class="username">Andi</h3>
-                    <span>5 menit yang lalu</span>
-                  </div>
-                </div>
-                <p>Ada yang punya rekomendasi tempat makan enak di kota?</p>
-                <img
-                  src="assets/imgs/makanan.jpg"
-                  alt="Bromo"
-                  class="post-image"
-                />
-                <div class="post-actions">
-                  <button class="far fa-thumbs-up">
-                    <span style="text-transform: capitalize">Like</span>
-                  </button>
-                  <button class="far fa-comment">
-                    <span style="text-transform: capitalize">Komentar</span>
-                  </button>
-                  <button class="fas fa-share">
-                    <span style="text-transform: capitalize">share</span>
-                  </button>
+            <div class="post-item">
+              <div class="post-user">
+                <img src="assets/imgs/customer03.jpg" alt="User Profile" />
+                <div>
+                  <h3 class="username">Siti</h3>
+                  <span>1 jam yang lalu</span>
                 </div>
               </div>
+              <p>Baru saja selesai lari pagi di taman. Udara segar banget!</p>
+              <img src="assets/imgs/Udara.jpg" alt="Bromo" class="post-image" />
+              <div class="post-actions">
+                <button class="far fa-thumbs-up">
+                  <span style="text-transform: capitalize">Like</span>
+                </button>
+                <button class="far fa-comment">
+                  <span style="text-transform: capitalize">Komentar</span>
+                </button>
+                <button class="fas fa-share">
+                  <span style="text-transform: capitalize">share</span>
+                </button>
+              </div>
+            </div>
 
-              <div class="post-item">
-                <div class="post-user">
-                  <img src="assets/imgs/customer03.jpg" alt="User Profile" />
-                  <div>
-                    <h3 class="username">Siti</h3>
-                    <span>1 jam yang lalu</span>
-                  </div>
-                </div>
-                <p>Baru saja selesai lari pagi di taman. Udara segar banget!</p>
-                <img
-                  src="assets/imgs/Udara.jpg"
-                  alt="Bromo"
-                  class="post-image"
-                />
-                <div class="post-actions">
-                  <button class="far fa-thumbs-up">
-                    <span style="text-transform: capitalize">Like</span>
-                  </button>
-                  <button class="far fa-comment">
-                    <span style="text-transform: capitalize">Komentar</span>
-                  </button>
-                  <button class="fas fa-share">
-                    <span style="text-transform: capitalize">share</span>
-                  </button>
+            <div class="post-item">
+              <div class="post-user">
+                <img src="assets/imgs/customer04.png" alt="User Profile" />
+                <div>
+                  <h3 class="username">Joko</h3>
+                  <span>3 jam yang lalu</span>
                 </div>
               </div>
-
-              <div class="post-item">
-                <div class="post-user">
-                  <img src="assets/imgs/customer04.png" alt="User Profile" />
-                  <div>
-                    <h3 class="username">Joko</h3>
-                    <span>3 jam yang lalu</span>
-                  </div>
-                </div>
-                <p>
-                  Butuh rekomendasi buku yang bagus buat weekend ini. Ada saran?
-                </p>
-                <div class="post-actions">
-                  <button class="far fa-thumbs-up">
-                    <span style="text-transform: capitalize">Like</span>
-                  </button>
-                  <button class="far fa-comment">
-                    <span style="text-transform: capitalize">Komentar</span>
-                  </button>
-                  <button class="fas fa-share">
-                    <span style="text-transform: capitalize">share</span>
-                  </button>
-                </div>
+              <p>
+                Butuh rekomendasi buku yang bagus buat weekend ini. Ada saran?
+              </p>
+              <div class="post-actions">
+                <button class="far fa-thumbs-up">
+                  <span style="text-transform: capitalize">Like</span>
+                </button>
+                <button class="far fa-comment">
+                  <span style="text-transform: capitalize">Komentar</span>
+                </button>
+                <button class="fas fa-share">
+                  <span style="text-transform: capitalize">share</span>
+                </button>
               </div>
             </div>
           </div>
+        </div>
 
-          <!-- Forum Kanan: Chat Diskusi -->
-          <div id="forum-right" class="forum-right hidden">
-            <div class="chat-container">
-              <div class="chat-header">
-                <h2>Chat Terkini</h2>
-              </div>
-              <div class="chat-message">
-                <ul class="chat-message-list">
-                  <li class="chat-message-item left">
-                    <img
-                      src="assets/imgs/customer01.jpg"
-                      alt="User Profile"
-                      class="chat-avatar"
-                    />
-                    <p>
-                      <span class="chat-username">Wawan</span>Halo semua! Ada
-                      rekomendasi tempat wisata?
-                    </p>
-                  </li>
-                  <li class="chat-message-item left">
-                    <img
-                      src="assets/imgs/customer02.jpg"
-                      alt="User Profile"
-                      class="chat-avatar"
-                    />
-                    <p>
-                      <span class="chat-username">Joko:</span>
-                      Ada event menarik minggu depan di Bali lho!
-                    </p>
-                  </li>
-                  <li class="chat-message-item right">
-                    <p>Yuk ke Pantai Parangtritis!</p>
-                  </li>
-                  <li class="chat-message-item right">
-                    <p>Ada yang tahu tempat makan enak di Jogja?</p>
-                  </li>
-                  <li class="chat-message-item left">
-                    <img
-                      src="assets/imgs/customer03.jpg"
-                      alt="User Profile"
-                      class="chat-avatar"
-                    />
-                    <p>
-                      <span class="chat-username">Siti:</span>
-                      Coba di Gudeg Yu Djum, enak banget!
-                    </p>
-                  </li>
-                  <li class="chat-message-item right">
-                    <p>Setuju! Atau bisa coba Sate Klathak juga 🍢</p>
-                  </li>
-                  <li class="chat-message-item left">
-                    <img
-                      src="assets/imgs/customer04.png"
-                      alt="User Profile"
-                      class="chat-avatar"
-                    />
-                    <p>
-                      <span class="chat-username">Bagas:</span>
-                      Siapa yang ikut trip ke Bromo minggu depan?
-                    </p>
-                  </li>
-                  <li class="chat-message-item right">
-                    <p>Aku ikut! Ada itinerary-nya?</p>
-                  </li>
-                  <li class="chat-message-item left">
-                    <img
-                      src="assets/imgs/customer04.png"
-                      alt="User Profile"
-                      class="chat-avatar"
-                    />
-                    <p>
-                      <span class="chat-username">Bagas</span>
-                      Nanti aku share di grup ya! 😁
-                    </p>
-                  </li>
-                </ul>
-              </div>
-              <div class="input-message">
-                <input type="text" placeholder="Tulis pesan..." />
-                <button>Kirim</button>
-              </div>
+        <!-- Forum Kanan: Chat Diskusi -->
+        <div id="forum-right" class="forum-right hidden">
+          <div class="chat-container">
+            <div class="chat-header">
+              <h2>Chat Terkini</h2>
+            </div>
+            <div class="chat-message">
+              <ul class="chat-message-list">
+                <li class="chat-message-item left">
+                  <img src="assets/imgs/customer01.jpg" alt="User Profile" class="chat-avatar" />
+                  <p>
+                    <span class="chat-username">Wawan</span>Halo semua! Ada
+                    rekomendasi tempat wisata?
+                  </p>
+                </li>
+                <li class="chat-message-item left">
+                  <img src="assets/imgs/customer02.jpg" alt="User Profile" class="chat-avatar" />
+                  <p>
+                    <span class="chat-username">Joko:</span>
+                    Ada event menarik minggu depan di Bali lho!
+                  </p>
+                </li>
+                <li class="chat-message-item right">
+                  <p>Yuk ke Pantai Parangtritis!</p>
+                </li>
+                <li class="chat-message-item right">
+                  <p>Ada yang tahu tempat makan enak di Jogja?</p>
+                </li>
+                <li class="chat-message-item left">
+                  <img src="assets/imgs/customer03.jpg" alt="User Profile" class="chat-avatar" />
+                  <p>
+                    <span class="chat-username">Siti:</span>
+                    Coba di Gudeg Yu Djum, enak banget!
+                  </p>
+                </li>
+                <li class="chat-message-item right">
+                  <p>Setuju! Atau bisa coba Sate Klathak juga 🍢</p>
+                </li>
+                <li class="chat-message-item left">
+                  <img src="assets/imgs/customer04.png" alt="User Profile" class="chat-avatar" />
+                  <p>
+                    <span class="chat-username">Bagas:</span>
+                    Siapa yang ikut trip ke Bromo minggu depan?
+                  </p>
+                </li>
+                <li class="chat-message-item right">
+                  <p>Aku ikut! Ada itinerary-nya?</p>
+                </li>
+                <li class="chat-message-item left">
+                  <img src="assets/imgs/customer04.png" alt="User Profile" class="chat-avatar" />
+                  <p>
+                    <span class="chat-username">Bagas</span>
+                    Nanti aku share di grup ya! 😁
+                  </p>
+                </li>
+              </ul>
+            </div>
+            <div class="input-message">
+              <input type="text" placeholder="Tulis pesan..." />
+              <button>Kirim</button>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <script>
-      function openTab(tab) {
-        document
-          .getElementById("forum-left")
-          .classList.toggle("hidden", tab !== "left");
-        document
-          .getElementById("forum-right")
-          .classList.toggle("hidden", tab !== "right");
+  </div>
+  <script>
+    function openTab(tab) {
+      const forumLeft = document.getElementById("forum-left");
+      const forumRight = document.getElementById("forum-right");
+      const body = document.body;
+
+      forumLeft.classList.toggle("hidden", tab !== "left");
+      forumRight.classList.toggle("hidden", tab !== "right");
+
+      // Jika forum-right tidak memiliki class hidden, tambahkan class chat ke body
+      if (!forumRight.classList.contains("hidden")) {
+        body.classList.add("chat");
+      } else {
+        body.classList.remove("chat");
       }
-    </script>
-  </body>
+    }
+
+  </script>
+</body>
+
 </html>

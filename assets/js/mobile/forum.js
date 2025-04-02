@@ -25,8 +25,21 @@ channelLinks.forEach((link) => {
 
 // Tombol kembali ke daftar channel
 
-
 function backButton() {
-    forumSection.style.display = "none"; // Sembunyikan forum section
-    channelSection.style.display = "block";
+  forumSection.style.display = "none"; // Sembunyikan forum section
+  channelSection.style.display = "block";
 }
+
+function showOnline() {
+  document.querySelectorAll(".show-online").forEach((element) => {
+    element.style.display = "flex"; // Menampilkan semua elemen dengan class "show-online"
+  });
+}
+
+function hiddenOnline() {
+  document.querySelectorAll(".show-online").forEach((element) => {
+    element.style.display = "none"; // Menyembunyikan semua elemen dengan class "show-online"
+  });
+}
+
+
