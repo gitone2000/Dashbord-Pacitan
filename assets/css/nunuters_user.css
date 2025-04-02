@@ -394,7 +394,7 @@ button:hover {
   justify-content: center;
   width: 35px;
   height: 35px;
-  background: #007bff;
+  /* background: #007bff; */
   border-radius: 50%;
   transition: background 0.3s ease-in-out;
   margin-right: 18px;
@@ -403,12 +403,12 @@ button:hover {
 .back-button svg {
   width: 24px;
   height: 24px;
-  stroke: white;
+  stroke: black;
 }
 
-.back-button:hover {
+/* .back-button:hover {
   background: #e03e00;
-}
+} */
 
 
 @media screen and (max-width: 768px) {
