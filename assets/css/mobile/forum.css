@@ -167,8 +167,9 @@ main section.channel .channel-list .channel-item .channel-link span {
     -ms-border-radius: 50%;
     -o-border-radius: 50%;
     background-color: #ddd;
+    overflow: hidden;
 
-    >svg {
+    >img {
         width: 100%;
         height: 100%;
     }
@@ -300,6 +301,12 @@ main section.forum .forum-list .forum-item .chat-container .chat-header span {
     -ms-border-radius: 50%;
     -o-border-radius: 50%;
     background-color: #ddd;
+    overflow: hidden;
+
+    >img {
+        width: 100%;
+        height: 100%;
+    }
 }
 
 main section.forum .forum-list .forum-item .chat-container .chat-header h1 {
