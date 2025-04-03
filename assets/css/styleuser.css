@@ -4,6 +4,15 @@
     box-sizing: border-box;
     /* border: 1px solid red; */
 }
+:root {
+    /* --blue: rgb(249, 6, 228); */
+    /* --blue: #ac00a3; */
+    --blue: #0B409C;
+    --white: #fff;
+    --gray: #f5f5f5;
+    --black1: #222;
+    --black2: #999;
+  }
 /* menu iconic */
 .floating-menu {
     position: fixed;
@@ -12,7 +21,7 @@
     right: 20px;
     width: 70px;
     height: 70px;
-    background: linear-gradient(135deg, #ff7f50, #ff4500);
+    background: linear-gradient(135deg, #0051ff, #00028d);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -23,7 +32,7 @@
 }
 .floating-menu:hover {
     transform: scale(1.1);
-    background: linear-gradient(135deg, #ff4500, #ff7f50);
+    background: linear-gradient(135deg,#00028d,  #0051ff);
 }
 .floating-menu img {
     width: 40px;
@@ -32,7 +41,7 @@
 .floating-text {
     position: absolute;
     bottom: -4px;
-    background: linear-gradient(135deg, #ff7f50, #ff4500);
+    background: linear-gradient(135deg, #00028d,  #0051ff);
     color: white;
     padding: 5px 10px;
     border-radius: 15px;
@@ -181,8 +190,9 @@ main section.content__menu {
 }
 
 .menu__item a.active {
-    background: linear-gradient(135deg, #ff7f50, #ff4500);
-    color: white; /* Warna teks saat aktif */
+    /* background: linear-gradient(135deg, #00028d,  #0051ff); */
+    background: rgba(23, 131, 255, 0.432);
+    color: rgb(255, 255, 255); /* Warna teks saat aktif */
     border-radius: 6px;
     padding: 10px 10px;
 }
