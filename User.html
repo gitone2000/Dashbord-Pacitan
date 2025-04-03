@@ -21,6 +21,33 @@
             src="https://img.icons8.com/material-outlined/24/user--v1.png"
             alt="user--v1"
           />
+          <!-- <div class="user-menu">
+            <div class="user-info">
+              <img src="assets/imgs/customer02.jpg" alt="" />
+              <div class="info">
+                <h3>Andi</h3>
+                <small>Pengguna</small>
+              </div>
+            </div>
+            <ul>
+              <li>
+                <ion-icon name="person-outline"></ion-icon>
+                <a href="#">Profil</a>
+              </li>
+              <li>
+                <ion-icon name="create-outline"></ion-icon>
+                <a href="#">Ubah Profil</a>
+              </li>
+              <li>
+                <ion-icon name="settings-outline"></ion-icon>
+                <a href="#">Pengaturan</a>
+              </li>
+              <li>
+                <ion-icon name="log-out-outline"></ion-icon>
+                <a href="#">Keluar</a>
+              </li>
+            </ul>
+          </div> -->
         </div>
       </div>
       <ul class="image__slider">
@@ -215,6 +242,25 @@
           menuList.scrollBy({ left: 100, behavior: "smooth" });
         });
       });
+
+//       document.addEventListener("DOMContentLoaded", function () {
+//     const avatar = document.querySelector(".avatar img");
+//     const userMenu = document.querySelector(".user-menu");
+
+//     avatar.addEventListener("click", function (event) {
+//         event.stopPropagation(); // Mencegah event bubbling
+//         userMenu.classList.toggle("active");
+//     });
+
+//     // Klik di luar user-menu untuk menutupnya
+//     document.addEventListener("click", function (event) {
+//         if (!userMenu.contains(event.target) && !avatar.contains(event.target)) {
+//             userMenu.classList.remove("active");
+//         }
+//     });
+// });
+
+
     </script>
   </body>
 </html>

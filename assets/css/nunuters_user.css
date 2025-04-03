@@ -56,6 +56,11 @@
   line-height: 1.5;
 }
 
+html{
+  width: 100%;
+  overflow-x: hidden;
+}
+
 /* Layout utama */
 body {
   font-family: Arial, sans-serif;
@@ -67,7 +72,7 @@ body {
   /* display: flex; */
   justify-content: center;
   background: #f0f2f5;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 body.chat {
   height: 100vh;

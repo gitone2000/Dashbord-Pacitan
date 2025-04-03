@@ -28,6 +28,7 @@
   padding: 20px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   transition: 0.3s ease-in-out;
+  height: 100%;
 }
 
 /* Tambahkan efek hover untuk inside-forum */
@@ -70,14 +71,13 @@ body {
 .forum-right {
   background: white;
   border-radius: 10px;
-  padding: 15px;
+  padding: 10px;
   border: 1px solid #ddd; /* Border tambahan */
   overflow-y: auto;
   max-height: 500px; /* Agar bisa scroll jika banyak konten */
 }
 .forum-left {
   flex: 1;
-  margin-right: 20px;
   color: white;
   background: var(--blue);
 }
@@ -205,6 +205,7 @@ body {
 .chat-container {
   display: flex;
   flex-direction: column;
+
 }
 .chat-header {
   font-size: 1em;
