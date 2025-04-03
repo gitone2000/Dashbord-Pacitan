@@ -119,7 +119,7 @@ for (let i = 1; i <= 90; i++) {
   
   // Tambahkan gambar ke dalam li
   let img = document.createElement("img");
-  img.src = "assets/imgs/gambar.jpeg"; // Menggunakan satu gambar yang sama
+  img.src = "/assets/imgs/gambar.jpeg"; // Menggunakan satu gambar yang sama
   img.alt = "";
   
   li.appendChild(img);
