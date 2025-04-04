@@ -1,298 +1,687 @@
 <!DOCTYPE html>
 <html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NUNUTERS Forum</title>
+    <link rel="stylesheet" href="/assets/css/mobile/nunuters_user.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>NUNUTERS Forum</title>
-  <link rel="stylesheet" href="/assets/css/mobile/nunuters_user.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-</head>
-
-<body>
-  <div class="forum">
-    <div class="inside-forum">
-      <!-- <div class="cardHeader">
+  <body>
+    <div class="forum">
+      <div class="inside-forum">
+        <!-- <div class="cardHeader">
             <h2>NUNUTERS</h2>
           </div> -->
-      <!-- <a href="/User.html">
+        <!-- <a href="/User.html">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
             stroke-width="1.5" stroke="currentColor" class="size-6">
             <path stroke-linecap="round" stroke-linejoin="round"
                 d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
         </svg>
         </a> -->
-      <div class="forum-tabs">
-        <a href="/mobile/User.html" class="back-button">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-            stroke="currentColor" class="size-6">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
-          </svg>
-        </a>
-        <div class="button-tab">
-          <button class="tab-button active" onclick="openTab('left')">
-            Forum Update
-          </button>
-          <button class="tab-button" onclick="openTab('right')">
-            Forum Chat
-          </button>
-        </div>
-      </div>
-      <!-- Konten halaman -->
-      <div class="forum-item">
-        <!-- Forum Kiri: Beranda Postingan -->
-        <div id="forum-left" class="forum-left">
-          <div class="feed-header">
-            <h2>Postingan Terkini</h2>
-          </div>
-          <div class="post-form">
-            <div class="avatar">
-              <img src="/assets/imgs/logo.png" alt="User Profile" class="post-icon" />
-              <h3>Admin</h3>
-            </div>
-            <textarea placeholder="Apa yang Anda pikirkan?"></textarea>
-            <div class="posting">
-              <label for="image-upload" class="image-button">
-                <i class="fas fa-image"></i>
-                <!-- Icon upload gambar di kanan -->
-              </label>
-              <input type="file" id="image-upload" style="display: none" />
-              <button>Posting</button>
-            </div>
-          </div>
-          <div class="post-list">
-            <div class="post-item">
-              <div class="post-user">
-                <img src="/assets/imgs/customer01.jpg" alt="User Profile" />
-                <div>
-                  <h3 class="username">Wawan</h3>
-                  <!-- Nama Pengguna -->
-                  <span>2 jam yang lalu</span>
-                </div>
-              </div>
-              <p>
-                Senang banget akhirnya bisa nonton konser idola semalam! 🤩
-              </p>
-              <div class="post-actions">
-                <button class="far fa-thumbs-up">
-                  <span style="text-transform: capitalize">Like</span>
-                </button>
-                <button class="far fa-comment">
-                  <span style="text-transform: capitalize">Komentar</span>
-                </button>
-                <button class="fas fa-share">
-                  <span style="text-transform: capitalize">share</span>
-                </button>
-              </div>
-            </div>
-
-            <div class="post-item">
-              <div class="post-user">
-                <img src="/assets/imgs/customer01.jpg" alt="User Profile" />
-                <div>
-                  <h3 class="username">Wawan</h3>
-                  <span>10 menit yang lalu</span>
-                </div>
-              </div>
-              <p>
-                Hari ini cuacanya cerah banget! Cocok buat jalan-jalan ke
-                pantai.
-              </p>
-              <img src="/assets/imgs/wisata/pantai1.jpg" alt="Pantai Cerah" class="post-image" />
-              <div class="post-actions">
-                <button class="far fa-thumbs-up">
-                  <span style="text-transform: capitalize">Like</span>
-                </button>
-                <button class="far fa-comment">
-                  <span style="text-transform: capitalize">Komentar</span>
-                </button>
-                <button class="fas fa-share">
-                  <span style="text-transform: capitalize">share</span>
-                </button>
-              </div>
-            </div>
-
-            <div class="post-item">
-              <div class="post-user">
-                <img src="/assets/imgs/customer02.jpg" alt="User Profile" />
-                <div>
-                  <h3 class="username">Andi</h3>
-                  <span>30 menit yang lalu</span>
-                </div>
-              </div>
-              <p>
-                Siapa yang mau ikut trip ke Bromo minggu depan? Info di DM ya!
-              </p>
-              <img src="/assets/imgs/goagong.jpg" alt="Bromo" class="post-image" />
-              <div class="post-actions">
-                <button class="far fa-thumbs-up">
-                  <span style="text-transform: capitalize">Like</span>
-                </button>
-                <button class="far fa-comment">
-                  <span style="text-transform: capitalize">Komentar</span>
-                </button>
-                <button class="fas fa-share">
-                  <span style="text-transform: capitalize">share</span>
-                </button>
-              </div>
-            </div>
-
-            <div class="post-item">
-              <div class="post-user">
-                <img src="/assets/imgs/customer02.jpg" alt="User Profile" />
-                <div>
-                  <h3 class="username">Andi</h3>
-                  <span>5 menit yang lalu</span>
-                </div>
-              </div>
-              <p>Ada yang punya rekomendasi tempat makan enak di kota?</p>
-              <img src="/assets/imgs/makanan.jpg" alt="Bromo" class="post-image" />
-              <div class="post-actions">
-                <button class="far fa-thumbs-up">
-                  <span style="text-transform: capitalize">Like</span>
-                </button>
-                <button class="far fa-comment">
-                  <span style="text-transform: capitalize">Komentar</span>
-                </button>
-                <button class="fas fa-share">
-                  <span style="text-transform: capitalize">share</span>
-                </button>
-              </div>
-            </div>
-
-            <div class="post-item">
-              <div class="post-user">
-                <img src="/assets/imgs/customer03.jpg" alt="User Profile" />
-                <div>
-                  <h3 class="username">Siti</h3>
-                  <span>1 jam yang lalu</span>
-                </div>
-              </div>
-              <p>Baru saja selesai lari pagi di taman. Udara segar banget!</p>
-              <img src="/assets/imgs/Udara.jpg" alt="Bromo" class="post-image" />
-              <div class="post-actions">
-                <button class="far fa-thumbs-up">
-                  <span style="text-transform: capitalize">Like</span>
-                </button>
-                <button class="far fa-comment">
-                  <span style="text-transform: capitalize">Komentar</span>
-                </button>
-                <button class="fas fa-share">
-                  <span style="text-transform: capitalize">share</span>
-                </button>
-              </div>
-            </div>
-
-            <div class="post-item">
-              <div class="post-user">
-                <img src="/assets/imgs/customer04.png" alt="User Profile" />
-                <div>
-                  <h3 class="username">Joko</h3>
-                  <span>3 jam yang lalu</span>
-                </div>
-              </div>
-              <p>
-                Butuh rekomendasi buku yang bagus buat weekend ini. Ada saran?
-              </p>
-              <div class="post-actions">
-                <button class="far fa-thumbs-up">
-                  <span style="text-transform: capitalize">Like</span>
-                </button>
-                <button class="far fa-comment">
-                  <span style="text-transform: capitalize">Komentar</span>
-                </button>
-                <button class="fas fa-share">
-                  <span style="text-transform: capitalize">share</span>
-                </button>
-              </div>
-            </div>
+        <div class="forum-tabs">
+          <a href="/mobile/User.html" class="back-button">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="size-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18"
+              />
+            </svg>
+          </a>
+          <div class="button-tab">
+            <button class="tab-button active" onclick="openTab('left')">
+              Forum Update
+            </button>
+            <button class="tab-button" onclick="openTab('right')">
+              Forum Chat
+            </button>
           </div>
         </div>
+        <!-- Konten halaman -->
+        <div class="forum-item">
+          <!-- Forum Kiri: Beranda Postingan -->
+          <div id="forum-left" class="forum-left">
+            <div class="feed-header">
+              <h2>Postingan Terkini</h2>
+            </div>
+            <div class="post-form">
+              <div class="avatar">
+                <img
+                  src="/assets/imgs/logo.png"
+                  alt="User Profile"
+                  class="post-icon"
+                />
+                <h3>Admin</h3>
+              </div>
+              <textarea placeholder="Apa yang Anda pikirkan?"></textarea>
+              <div class="posting">
+                <label for="image-upload" class="image-button">
+                  <i class="fas fa-image"></i>
+                  <!-- Icon upload gambar di kanan -->
+                </label>
+                <input type="file" id="image-upload" style="display: none" />
+                <button>Posting</button>
+              </div>
+            </div>
+            <div class="post-list">
+              <div class="post-item">
+                <div class="post-user">
+                  <img src="/assets/imgs/customer01.jpg" alt="User Profile" />
+                  <div>
+                    <h3 class="username">Wawan</h3>
+                    <!-- Nama Pengguna -->
+                    <span>1 menit yang lalu</span>
+                  </div>
+                </div>
+                <p>
+                  Senang banget akhirnya bisa nonton konser Gilga semalam di
+                  Pacitan! 🤩
+                </p>
+                <div class="post-actions">
+                  <button class="far fa-thumbs-up">
+                    <span style="text-transform: capitalize">Like</span>
+                  </button>
+                  <button class="far fa-comment">
+                    <span style="text-transform: capitalize">Komentar</span>
+                  </button>
+                  <button class="fas fa-share">
+                    <span style="text-transform: capitalize">share</span>
+                  </button>
+                </div>
+              </div>
 
-        <!-- Forum Kanan: Chat Diskusi -->
-        <div id="forum-right" class="forum-right hidden">
-          <div class="chat-container">
-            <div class="chat-header">
-              <h2>Chat Terkini</h2>
+              <div class="post-item">
+                <div class="post-user">
+                  <img src="/assets/imgs/customer01.jpg" alt="User Profile" />
+                  <div>
+                    <h3 class="username">Wawan</h3>
+                    <span>2 menit yang lalu</span>
+                  </div>
+                </div>
+                <p>
+                  Hari ini cuacanya cerah banget! Cocok buat jalan-jalan ke
+                  pantai Klayar.
+                </p>
+                <img
+                  src="/assets/imgs/wisata/pantai1.jpg"
+                  alt="Pantai Cerah"
+                  class="post-image"
+                />
+                <div class="post-actions">
+                  <button class="far fa-thumbs-up">
+                    <span style="text-transform: capitalize">Like</span>
+                  </button>
+                  <button class="far fa-comment">
+                    <span style="text-transform: capitalize">Komentar</span>
+                  </button>
+                  <button class="fas fa-share">
+                    <span style="text-transform: capitalize">share</span>
+                  </button>
+                </div>
+              </div>
+
+              <div class="post-item">
+                <div class="post-user">
+                  <img src="/assets/imgs/customer02.jpg" alt="User Profile" />
+                  <div>
+                    <h3 class="username">Andi</h3>
+                    <span>5 menit yang lalu</span>
+                  </div>
+                </div>
+                <p>
+                  Siapa yang mau ikut trip ke Goa Gong di pacitan minggu depan?
+                  Info di DM ya!
+                </p>
+                <img
+                  src="/assets/imgs/goagong.jpg"
+                  alt="Bromo"
+                  class="post-image"
+                />
+                <div class="post-actions">
+                  <button class="far fa-thumbs-up">
+                    <span style="text-transform: capitalize">Like</span>
+                  </button>
+                  <button class="far fa-comment">
+                    <span style="text-transform: capitalize">Komentar</span>
+                  </button>
+                  <button class="fas fa-share">
+                    <span style="text-transform: capitalize">share</span>
+                  </button>
+                </div>
+              </div>
+
+              <div class="post-item">
+                <div class="post-user">
+                  <img src="/assets/imgs/customer02.jpg" alt="User Profile" />
+                  <div>
+                    <h3 class="username">Andi</h3>
+                    <span>30 menit yang lalu</span>
+                  </div>
+                </div>
+                <p>Ada yang punya rekomendasi tempat makan enak di kota?</p>
+                <img
+                  src="/assets/imgs/makanan.jpg"
+                  alt="Bromo"
+                  class="post-image"
+                />
+                <div class="post-actions">
+                  <button class="far fa-thumbs-up">
+                    <span style="text-transform: capitalize">Like</span>
+                  </button>
+                  <button class="far fa-comment">
+                    <span style="text-transform: capitalize">Komentar</span>
+                  </button>
+                  <button class="fas fa-share">
+                    <span style="text-transform: capitalize">share</span>
+                  </button>
+                </div>
+              </div>
+
+              <div class="post-item">
+                <div class="post-user">
+                  <img src="/assets/imgs/customer03.jpg" alt="User Profile" />
+                  <div>
+                    <h3 class="username">Siti</h3>
+                    <span>1 jam yang lalu</span>
+                  </div>
+                </div>
+                <p>
+                  Baru saja selesai lari pagi di pantai teleng ria. Udara segar
+                  banget!
+                </p>
+                <img
+                  src="/assets/imgs/Udara.jpg"
+                  alt="Bromo"
+                  class="post-image"
+                />
+                <div class="post-actions">
+                  <button class="far fa-thumbs-up">
+                    <span style="text-transform: capitalize">Like</span>
+                  </button>
+                  <button class="far fa-comment">
+                    <span style="text-transform: capitalize">Komentar</span>
+                  </button>
+                  <button class="fas fa-share">
+                    <span style="text-transform: capitalize">share</span>
+                  </button>
+                </div>
+              </div>
+
+              <div class="post-item">
+                <div class="post-user">
+                  <img src="/assets/imgs/customer04.png" alt="User Profile" />
+                  <div>
+                    <h3 class="username">Joko</h3>
+                    <span>2 jam yang lalu</span>
+                  </div>
+                </div>
+                <p>
+                  Butuh rekomendasi buku yang bagus buat weekend ini. Ada saran?
+                </p>
+                <div class="post-actions">
+                  <button class="far fa-thumbs-up">
+                    <span style="text-transform: capitalize">Like</span>
+                  </button>
+                  <button class="far fa-comment">
+                    <span style="text-transform: capitalize">Komentar</span>
+                  </button>
+                  <button class="fas fa-share">
+                    <span style="text-transform: capitalize">share</span>
+                  </button>
+                </div>
+              </div>
+
+              <div class="post-item">
+                <div class="post-user">
+                  <img src="/assets/imgs/customer05.png" alt="User Profile" />
+                  <div>
+                    <h3 class="username">Sukri</h3>
+                    <span>3 jam yang lalu</span>
+                  </div>
+                </div>
+                <p>Karang bolong bagus buat nyore🤩</p>
+                <img
+                  src="/assets/imgs/karangbolong.jpg"
+                  alt="karangbolong"
+                  class="post-image"
+                />
+                <div class="post-actions">
+                  <button class="far fa-thumbs-up">
+                    <span style="text-transform: capitalize">Like</span>
+                  </button>
+                  <button class="far fa-comment">
+                    <span style="text-transform: capitalize">Komentar</span>
+                  </button>
+                  <button class="fas fa-share">
+                    <span style="text-transform: capitalize">share</span>
+                  </button>
+                </div>
+              </div>
+
+              <div class="post-item">
+                <div class="post-user">
+                  <img src="/assets/imgs/customer06.png" alt="User Profile" />
+                  <div>
+                    <h3 class="username">Ela</h3>
+                    <span>3 jam yang lalu</span>
+                  </div>
+                </div>
+                <p>Rekomend tempat liburan donggg</p>
+                <div class="post-actions">
+                  <button class="far fa-thumbs-up">
+                    <span style="text-transform: capitalize">Like</span>
+                  </button>
+                  <button class="far fa-comment">
+                    <span style="text-transform: capitalize">Komentar</span>
+                  </button>
+                  <button class="fas fa-share">
+                    <span style="text-transform: capitalize">share</span>
+                  </button>
+                </div>
+              </div>
+
+              <div class="post-item">
+                <div class="post-user">
+                  <img src="/assets/imgs/customer07.png" alt="User Profile" />
+                  <div>
+                    <h3 class="username">Jono The Jack</h3>
+                    <span>4 jam yang lalu</span>
+                  </div>
+                </div>
+                <p>Infonya lurr</p>
+                <div class="post-actions">
+                  <button class="far fa-thumbs-up">
+                    <span style="text-transform: capitalize">Like</span>
+                  </button>
+                  <button class="far fa-comment">
+                    <span style="text-transform: capitalize">Komentar</span>
+                  </button>
+                  <button class="fas fa-share">
+                    <span style="text-transform: capitalize">share</span>
+                  </button>
+                </div>
+              </div>
+
+              <div class="post-item">
+                <div class="post-user">
+                  <img src="/assets/imgs/customer08.png" alt="User Profile" />
+                  <div>
+                    <h3 class="username">Narto</h3>
+                    <span>4 jam yang lalu</span>
+                  </div>
+                </div>
+                <p>Tolong bantu cari, kehilangan motor</p>
+                <img
+                  src="/assets/imgs/Motor.jpeg"
+                  alt="motor"
+                  class="post-image"
+                />
+                <div class="post-actions">
+                  <button class="far fa-thumbs-up">
+                    <span style="text-transform: capitalize">Like</span>
+                  </button>
+                  <button class="far fa-comment">
+                    <span style="text-transform: capitalize">Komentar</span>
+                  </button>
+                  <button class="fas fa-share">
+                    <span style="text-transform: capitalize">share</span>
+                  </button>
+                </div>
+              </div>
+
+              <div class="post-item">
+                <div class="post-user">
+                  <img src="/assets/imgs/customer09.png" alt="User Profile" />
+                  <div>
+                    <h3 class="username">Budiman</h3>
+                    <span>5 jam yang lalu</span>
+                  </div>
+                </div>
+                <p>Jual Pakan burung</p>
+                <img
+                  src="/assets/imgs/Pakan.jpg"
+                  alt="pakan"
+                  class="post-image"
+                />
+                <div class="post-actions">
+                  <button class="far fa-thumbs-up">
+                    <span style="text-transform: capitalize">Like</span>
+                  </button>
+                  <button class="far fa-comment">
+                    <span style="text-transform: capitalize">Komentar</span>
+                  </button>
+                  <button class="fas fa-share">
+                    <span style="text-transform: capitalize">share</span>
+                  </button>
+                </div>
+              </div>
+
+              <div class="post-item">
+                <div class="post-user">
+                  <img src="/assets/imgs/logo.png" alt="User Profile" />
+                  <div>
+                    <h3 class="username">Admin</h3>
+                    <span>5 jam yang lalu</span>
+                  </div>
+                </div>
+                <p>
+                  Cuaca Hari Saat ini Pemutakhiran: 04 Apr 2025, 18:00 WIB 25 °C
+                  Berawan di Pacitan
+                </p>
+
+                <div class="post-actions">
+                  <button class="far fa-thumbs-up">
+                    <span style="text-transform: capitalize">Like</span>
+                  </button>
+                  <button class="far fa-comment">
+                    <span style="text-transform: capitalize">Komentar</span>
+                  </button>
+                  <button class="fas fa-share">
+                    <span style="text-transform: capitalize">share</span>
+                  </button>
+                </div>
+              </div>
+
+              <div class="post-item">
+                <div class="post-user">
+                  <img src="/assets/imgs/customer10.png" alt="User Profile" />
+                  <div>
+                    <h3 class="username">Nita</h3>
+                    <span>6 jam yang lalu</span>
+                  </div>
+                </div>
+                <p>Pengenn ke Pantai srau lagiii</p>
+                <img
+                  src="/assets/imgs/pantai-srau.jpg"
+                  alt="srau"
+                  class="post-image"
+                />
+                <div class="post-actions">
+                  <button class="far fa-thumbs-up">
+                    <span style="text-transform: capitalize">Like</span>
+                  </button>
+                  <button class="far fa-comment">
+                    <span style="text-transform: capitalize">Komentar</span>
+                  </button>
+                  <button class="fas fa-share">
+                    <span style="text-transform: capitalize">share</span>
+                  </button>
+                </div>
+              </div>
+
             </div>
-            <div class="chat-message">
-              <ul class="chat-message-list">
-                <li class="chat-message-item left">
-                  <img src="/assets/imgs/customer01.jpg" alt="User Profile" class="chat-avatar" />
-                  <p>
-                    <span class="chat-username">Wawan</span>Halo semua! Ada
-                    rekomendasi tempat wisata?
-                  </p>
-                </li>
-                <li class="chat-message-item left">
-                  <img src="/assets/imgs/customer02.jpg" alt="User Profile" class="chat-avatar" />
-                  <p>
-                    <span class="chat-username">Joko:</span>
-                    Ada event menarik minggu depan di Bali lho!
-                  </p>
-                </li>
-                <li class="chat-message-item right">
-                  <p>Yuk ke Pantai Parangtritis!</p>
-                </li>
-                <li class="chat-message-item right">
-                  <p>Ada yang tahu tempat makan enak di Jogja?</p>
-                </li>
-                <li class="chat-message-item left">
-                  <img src="/assets/imgs/customer03.jpg" alt="User Profile" class="chat-avatar" />
-                  <p>
-                    <span class="chat-username">Siti:</span>
-                    Coba di Gudeg Yu Djum, enak banget!
-                  </p>
-                </li>
-                <li class="chat-message-item right">
-                  <p>Setuju! Atau bisa coba Sate Klathak juga 🍢</p>
-                </li>
-                <li class="chat-message-item left">
-                  <img src="/assets/imgs/customer04.png" alt="User Profile" class="chat-avatar" />
-                  <p>
-                    <span class="chat-username">Bagas:</span>
-                    Siapa yang ikut trip ke Bromo minggu depan?
-                  </p>
-                </li>
-                <li class="chat-message-item right">
-                  <p>Aku ikut! Ada itinerary-nya?</p>
-                </li>
-                <li class="chat-message-item left">
-                  <img src="/assets/imgs/customer04.png" alt="User Profile" class="chat-avatar" />
-                  <p>
-                    <span class="chat-username">Bagas</span>
-                    Nanti aku share di grup ya! 😁
-                  </p>
-                </li>
-              </ul>
-            </div>
-            <div class="input-message">
-              <input type="text" placeholder="Tulis pesan..." />
-              <button>Kirim</button>
+          </div>
+
+          <!-- Forum Kanan: Chat Diskusi -->
+          <div id="forum-right" class="forum-right hidden">
+            <div class="chat-container">
+              <div class="chat-header">
+                <h2>Chat Terkini</h2>
+              </div>
+              <div class="chat-message">
+                <ul class="chat-message-list">
+                  <li class="chat-message-item left">
+                    <img
+                      src="/assets/imgs/customer01.jpg"
+                      alt="User Profile"
+                      class="chat-avatar"
+                    />
+                    <p>
+                      <span class="chat-username">Wawan</span>Halo semua!
+                      Ada rekomendasi tempat wisata?
+                    </p>
+                  </li>
+                  <li class="chat-message-item left">
+                    <img
+                      src="/assets/imgs/customer02.jpg"
+                      alt="User Profile"
+                      class="chat-avatar"
+                    />
+                    <p>
+                      <span class="chat-username">Joko:</span>
+                      Adaa, juga ada event menarik minggu depan di Pantai Srau Pacitan lho!
+                    </p>
+                  </li>
+                  <li class="chat-message-item right">
+                    <!-- <span class="chat-username">Aku:</span> -->
+                    <p>Yuk ke Pantai Srau</p>
+                  </li>
+                  <li class="chat-message-item right">
+                    <!-- <span class="chat-username">Aku:</span> -->
+                    <p>Ada yang tahu spot foto bagus disana?</p>
+                  </li>
+                  <li class="chat-message-item left">
+                    <img
+                      src="/assets/imgs/customer03.jpg"
+                      alt="User Profile"
+                      class="chat-avatar"
+                    />
+                    <p>
+                      <span class="chat-username">Siti:</span>
+                      Coba foto di depan karang bolongnya, baguss tuh🤩
+                    </p>
+                  </li>
+                  <li class="chat-message-item right">
+                    <!-- <span class="chat-username">Aku:</span> -->
+                    <p>Setuju! Atau bisa coba dibawah pohon kelapanya</p>
+                  </li>
+                  <li class="chat-message-item left">
+                    <img
+                      src="/assets/imgs/customer04.png"
+                      alt="User Profile"
+                      class="chat-avatar"
+                    />
+                    <p>
+                      <span class="chat-username">Bagas:</span>
+                      Info jual motor
+                    </p>
+                  </li>
+                  <li class="chat-message-item right">
+                    <!-- <span class="chat-username">Aku:</span> -->
+                    <p>Info info</p>
+                  </li>
+                  <li class="chat-message-item left">
+                    <img
+                      src="/assets/imgs/customer04.png"
+                      alt="User Profile"
+                      class="chat-avatar"
+                    />
+                    <p>
+                      <span class="chat-username">Bagas</span>
+                      Nanti tolong share di grup ya! 😁
+                    </p>
+                  </li>
+
+                  <li class="chat-message-item left">
+                    <img
+                      src="/assets/imgs/customer05.png"
+                      alt="User Profile"
+                      class="chat-avatar"
+                    />
+                    <p>
+                      <span class="chat-username">Sukri</span>
+                      Cari di Update terkini hari ini kan banyak infonya
+                    </p>
+                  </li>
+
+                  <li class="chat-message-item left">
+                    <img
+                      src="/assets/imgs/customer04.png"
+                      alt="User Profile"
+                      class="chat-avatar"
+                    />
+                    <p>
+                      <span class="chat-username">Bagas</span>
+                      Oh iya cobaa
+                    </p>
+                  </li>
+
+                  <li class="chat-message-item left">
+                    <img
+                      src="/assets/imgs/customer06.png"
+                      alt="User Profile"
+                      class="chat-avatar"
+                    />
+                    <p>
+                      <span class="chat-username">Ela</span>
+                      Info cuaca hari ini dongg
+                    </p>
+                  </li>
+
+                  <li class="chat-message-item right">
+                    <!-- <span class="chat-username">Aku:</span> -->
+                    <p>Cuaca Hari Saat ini
+                      Pemutakhiran: 04 Apr 2025, 18:00 WIB
+                      25 °C
+                      Berawan
+                      di Pacitan</p>
+                  </li>
+
+                  <li class="chat-message-item left">
+                    <img
+                      src="/assets/imgs/customer06.png"
+                      alt="User Profile"
+                      class="chat-avatar"
+                    />
+                    <p>
+                      <span class="chat-username">Ela</span>
+                      Oke terimakasih, cerah sekali
+                    </p>
+                  </li>
+
+                  <li class="chat-message-item left">
+                    <img
+                      src="/assets/imgs/customer07.png"
+                      alt="User Profile"
+                      class="chat-avatar"
+                    />
+                    <p>
+                      <span class="chat-username">Jono The Jack</span>
+                      Punung Cerahh
+                    </p>
+                  </li>
+
+                  <li class="chat-message-item left">
+                    <img
+                      src="/assets/imgs/customer08.png"
+                      alt="User Profile"
+                      class="chat-avatar"
+                    />
+                    <p>
+                      <span class="chat-username">Narto</span>
+                      Tulakan juga cerah
+                    </p>
+                  </li>
+
+                  <li class="chat-message-item left">
+                    <img
+                      src="/assets/imgs/customer09.png"
+                      alt="User Profile"
+                      class="chat-avatar"
+                    />
+                    <p>
+                      <span class="chat-username">Budiman</span>
+                      Lorog Hujan kihh
+                    </p>
+                  </li>
+
+                  <li class="chat-message-item left">
+                    <img
+                      src="/assets/imgs/customer08.png"
+                      alt="User Profile"
+                      class="chat-avatar"
+                    />
+                    <p>
+                      <span class="chat-username">Narto</span>
+                      Wadoh Nasib😂
+                    </p>
+                  </li>
+
+                  <li class="chat-message-item left">
+                    <img
+                      src="/assets/imgs/customer09.png"
+                      alt="User Profile"
+                      class="chat-avatar"
+                    />
+                    <p>
+                      <span class="chat-username">Budiman</span>
+                      Duhh😂😂😂😂
+                    </p>
+                  </li>
+
+                  <li class="chat-message-item left">
+                    <img
+                      src="/assets/imgs/customer10.png"
+                      alt="User Profile"
+                      class="chat-avatar"
+                    />
+                    <p>
+                      <span class="chat-username">Nita</span>
+                      Wadu mana mau ke lorog saya nanti
+                    </p>
+                  </li>
+
+                  <li class="chat-message-item right">
+                    <!-- <span class="chat-username">Aku:</span> -->
+                    <p>Sabar cuma hujan air kok😂</p>
+                  </li>
+
+                  <li class="chat-message-item left">
+                    <img
+                      src="/assets/imgs/customer10.png"
+                      alt="User Profile"
+                      class="chat-avatar"
+                    />
+                    <p>
+                      <span class="chat-username">Nita</span>
+                      Iya air terjunn😂😂
+                    </p>
+                  </li>
+
+                </ul>
+              </div>
+              <div class="input-message">
+                <input type="text" placeholder="Tulis pesan..." />
+                <button>Kirim</button>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-  <script>
-    function openTab(tab) {
-      const forumLeft = document.getElementById("forum-left");
-      const forumRight = document.getElementById("forum-right");
-      const body = document.body;
+    <script>
+      function openTab(tab) {
+        const forumLeft = document.getElementById("forum-left");
+        const forumRight = document.getElementById("forum-right");
+        const body = document.body;
 
-      forumLeft.classList.toggle("hidden", tab !== "left");
-      forumRight.classList.toggle("hidden", tab !== "right");
+        forumLeft.classList.toggle("hidden", tab !== "left");
+        forumRight.classList.toggle("hidden", tab !== "right");
 
-      // Jika forum-right tidak memiliki class hidden, tambahkan class chat ke body
-      if (!forumRight.classList.contains("hidden")) {
-        body.classList.add("chat");
-      } else {
-        body.classList.remove("chat");
+        // Jika forum-right tidak memiliki class hidden, tambahkan class chat ke body
+        if (!forumRight.classList.contains("hidden")) {
+          body.classList.add("chat");
+        } else {
+          body.classList.remove("chat");
+        }
       }
-    }
-  </script>
-</body>
-
+    </script>
+  </body>
 </html>
