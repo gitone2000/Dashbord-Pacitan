@@ -1,6 +1,6 @@
-/* * {
-  border: 1px solid red;
-} */
+* {
+  /* border: 1px solid red; */
+}
 .content-forum-diskusi {
   position: relative;
   width: 100%;
@@ -87,9 +87,9 @@
   position: relative;
   display: block;
   height: 100%;
+  max-height: 100vh;
   padding: 10px;
   overflow: hidden;
-  /* background-color: #000; */
 }
 
 .forum-container .forum-item .forum-left .member-header {
@@ -105,6 +105,7 @@
   position: relative;
   border-radius: 15px 15px 0 0;
   overflow: hidden;
+  flex-shrink: 0;
 }
 
 .forum-container .forum-item .forum-left .member-header button {
@@ -147,7 +148,7 @@
   justify-content: center;
   align-items: center;
   background-color: var(--blue);
-
+  flex-shrink: 0;
 }
 
 .forum-container .forum-item .forum-left .member-search input {
@@ -165,12 +166,12 @@
   flex-direction: column;
   gap: 5px;
   list-style: none;
+  flex: 1;
 
   height: 100%;
-  max-height: 400px;
-  padding-top: 0.6em;
-  padding-inline: 0.5em;
-  overflow-y: scroll;
+  max-height: 350px;
+  padding: 0.6em 0.5em;
+  overflow-y: auto;
   overflow-x: hidden;
   background-color: #000;
 
@@ -247,6 +248,7 @@
   position: relative;
   display: block;
   height: 100%;
+  max-height: 100vh;
   padding-top: 10px;
   overflow: hidden;
   /* background-color: #000; */
@@ -263,8 +265,6 @@
 .forum-container .forum-item .forum-right .chat-container .chat-header {
   height: 45px;
   background: var(--blue);
-  /* text-align: start; */
-  /* border-bottom: 0.5px solid #000; */
   display: flex;
   align-items: center;
   padding: 0.5em 1em;
@@ -310,7 +310,7 @@
   max-height: calc(100% - 100px);
   flex-direction: column;
   gap: 0.3em;
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 
 .forum-container .forum-item .forum-right .chat-container .chat-message ul li.chat-message-item {
@@ -318,18 +318,31 @@
   padding: 0.7em 1em;
   border-radius: 5px;
   display: flex;
-  align-items: center;
-  gap: 0.5em;
+  align-items: start;
+  justify-content: start;
+  gap: 0.7em;
 }
+.forum-container .forum-item .forum-right .chat-container .chat-message ul li.chat-message-item.chat-left {
+  align-self: flex-start;
+  /* width: 100%; */
+}
+.forum-container .forum-item .forum-right .chat-container .chat-message ul li.chat-message-item.chat-right {
+  align-self: flex-end;
+  /* width: 100%; */
+}
+.forum-container .forum-item .forum-right .chat-container .chat-message ul li.chat-message-item.chat-right .profile-pict{
+  order: 1;
+}
+.forum-container .forum-item .forum-right .chat-container .chat-message ul li.chat-message-item.chat-right .chat-message-time{
+  align-self: flex-start;
+  }
 
 .forum-container .forum-item .forum-right .chat-container .chat-message ul li.chat-message-item .profile-pict {
   width: 30px;
   height: 30px;
   border-radius: 50%;
   background: var(--blue);
-  /* display: flex;
-  justify-content: center;
-  align-items: center; */
+  overflow: hidden;
 }
 
 .forum-container .forum-item .forum-right .chat-container .chat-message ul li.chat-message-item .profile-pict img {
@@ -349,10 +362,16 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  flex-wrap: wrap;
 }
 
 .forum-container .forum-item .forum-right .chat-container .chat-message ul li.chat-message-item .chat-message-output p {
-  font-size: 1em;
+  font-size: 0.8em;
+  max-width: 300px;
+  margin-top: 3px;
+  word-wrap: break-word;       /* Membungkus kata panjang */
+  overflow-wrap: break-word;   /* Alternatif modern */
+  white-space: normal;         /* Pastikan teks bisa wrap */
 }
 .forum-container .forum-item .forum-right .chat-container .chat-message ul li.chat-message-item .chat-message-output span.chat-message-time {
   font-size: 0.5em;
@@ -365,51 +384,21 @@
   color: #000;
   opacity: 0.5;
 }
-
-.forum-container .forum-item .forum-right .chat-container .chat-message ul li.chat-message-item .chat-message-output span.chat-message-name {
-  position: absolute;
-  font-size: 0.6em;
-  font-weight: 400;
-}
 .forum-container .forum-item .forum-right .chat-container .chat-message ul li.chat-message-item .chat-message-output span.chat-message-name {
   background-color: var(--blue);
   padding: 0.2em 0.4em;
   color: #fff;
-  top: -15%;
-  left: 5%;
+  top: -10px;
+  left: 2px;
   border-radius: 10px;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
   display: inline-block;
-}
-
-
-.forum-container .forum-item .forum-right .chat-container .chat-message ul li.chat-message-item:nth-child(odd) {
-  align-self: flex-start;
-}
-
-.forum-container .forum-item .forum-right .chat-container .chat-message ul li.chat-message-item:nth-child(odd) .profile-pict {
-  background: var(--blue);
-}
-
-.forum-container .forum-item .forum-right .chat-container .chat-message ul li.chat-message-item:nth-child(even) {
-  align-self: flex-end;
-}
-
-.forum-container .forum-item .forum-right .chat-container .chat-message ul li.chat-message-item:nth-child(even) .profile-pict {
-  background: var(--blue);
-  order: 2;
-}
-
-.forum-container .forum-item .forum-right .chat-container .chat-message ul li.chat-message-item:nth-child(even) p {
-  order: 1;
-}
-
-.forum-container .forum-item .forum-right .chat-container .chat-message ul li.chat-message-item:nth-child(even) .chat-message-output span.chat-message-time {
-  bottom: 0;
-  left: 2%;
+  position: absolute;
+  font-size: 0.6em;
+  font-weight: 400;
 }
 
 .forum-container .forum-item .forum-right .chat-container .input-message {

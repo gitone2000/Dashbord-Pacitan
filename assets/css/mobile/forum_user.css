@@ -185,10 +185,6 @@ main section.channel .channel-list .channel-item .channel-link p {
     text-align: center;
     color: #fff;
 }
-/* main section.channel .channel-list .channel-item .channel-link:hover p,
-main section.channel .channel-list .channel-item .channel-link:hover h1 {
-    color: #fff;
-} */
 
 main section.forum {
     display: none;
@@ -446,156 +442,115 @@ main section.forum .forum-list .forum-item .chat-container .chat-message {
     width: 100%;
     height: 100%;
     background-color: #ddd;
-    overflow-y: scroll;
-    padding: 1em;
+    overflow-y: auto;
+    /* padding: 1em; */
     display: flex;
     flex-direction: column;
     gap: 0.5em;
 }
-
-main section.forum .forum-list .forum-item .chat-container .chat-message .chat-user,
-main section.forum .forum-list .forum-item .chat-container .chat-message .chat-admin {
-    width: auto;
+main section.forum .forum-list .forum-item .chat-container .chat-message ul.chat-message-list{
+    list-style: none;
+    padding: 0.5em 0em;
+    margin: 0;
     display: flex;
-    padding: 0.3em;
-    gap: 0.5em;
+    height: 100%;
+    max-height: calc(100% - 10px);
+    flex-direction: column;
+    gap: 0.3em;
+    overflow-y: auto;
+}
+main section.forum .forum-list .forum-item .chat-container .chat-message ul.chat-message-list li.chat-message-item{
+    width: auto;
+    padding: 0.7em 1em;
     border-radius: 5px;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    -ms-border-radius: 5px;
-    -o-border-radius: 5px;
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    gap: 0.7em;
 }
-
-main section.forum .forum-list .forum-item .chat-container .chat-message .chat-user {
-    align-self: flex-end;
-}
-
-main section.forum .forum-list .forum-item .chat-container .chat-message .chat-admin {
+main section.forum .forum-list .forum-item .chat-container .chat-message ul.chat-message-list li.chat-message-item.chat-left{
     align-self: flex-start;
 }
-
-main section.forum .forum-list .forum-item .chat-container .chat-message .chat-user .chat-profile,
-main section.forum .forum-list .forum-item .chat-container .chat-message .chat-admin .chat-profile {
-    width: 35px;
-    height: 35px;
+main section.forum .forum-list .forum-item .chat-container .chat-message ul.chat-message-list li.chat-message-item.chat-right{
+    align-self: flex-end;
+}
+main section.forum .forum-list .forum-item .chat-container .chat-message ul.chat-message-list li.chat-message-item.chat-right .profile-pict{
+    order: 1;
+}
+main section.forum .forum-list .forum-item .chat-container .chat-message ul.chat-message-list li.chat-message-item .profile-pict{
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    -ms-border-radius: 50%;
-    -o-border-radius: 50%;
+    background: var(--blue);
     overflow: hidden;
-    background-color: #0B409C;
-
-    >span {
-        width: 100%;
-        height: 100%;
-    }
 }
-
-main section.forum .forum-list .forum-item .chat-container .chat-message .chat-user .chat-profile {
-    order: 2;
+main section.forum .forum-list .forum-item .chat-container .chat-message ul.chat-message-list li.chat-message-item .profile-pict img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
-
-main section.forum .forum-list .forum-item .chat-container .chat-message .chat-user .chat-info {
-    order: 1;
-}
-
-main section.forum .forum-list .forum-item .chat-container .chat-message .chat-admin .chat-info {
-    order: 1;
-}
-
-main section.forum .forum-list .forum-item .chat-container .chat-message .chat-user .chat-info,
-main section.forum .forum-list .forum-item .chat-container .chat-message .chat-admin .chat-info {
+main section.forum .forum-list .forum-item .chat-container .chat-message ul.chat-message-list li.chat-message-item .chat-message-output{
     width: auto;
-    padding: 0.2em 0.2em;
+    height: auto;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 0.5em 0.5em 0.3em 1em;
+    position: relative;
     display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
-    gap: 0.2em;
-    border-radius: 5px;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    -ms-border-radius: 5px;
-    -o-border-radius: 5px;
+    flex-wrap: wrap;
 }
-
-main section.forum .forum-list .forum-item .chat-container .chat-message .chat-user .chat-info .info-message,
-main section.forum .forum-list .forum-item .chat-container .chat-message .chat-admin .chat-info .info-message {
+main section.forum .forum-list .forum-item .chat-container .chat-message ul.chat-message-list li.chat-message-item.chat-right .chat-message-output{
     background-color: #0B409C;
-    color: #fff;
-    border-radius: 5px;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    -ms-border-radius: 5px;
-    -o-border-radius: 5px;
-    display: flex;
-    flex-direction: column;
-    padding: 0.2em 0.5em;
-    gap: 0.3em;
 }
-
-main section.forum .forum-list .forum-item .chat-container .chat-message .chat-user .chat-info span,
-main section.forum .forum-list .forum-item .chat-container .chat-message .chat-admin .chat-info span {
+main section.forum .forum-list .forum-item .chat-container .chat-message ul.chat-message-list li.chat-message-item .chat-message-output p{
+    font-size: 0.8em;
+    max-width: 220px;
+    margin-top: 3px;
+    word-wrap: break-word;       /* Membungkus kata panjang */
+    overflow-wrap: break-word;   /* Alternatif modern */
+    white-space: normal;         /* Pastikan teks bisa wrap */
+}
+main section.forum .forum-list .forum-item .chat-container .chat-message ul.chat-message-list li.chat-message-item.chat-right .chat-message-output p{
+    color: #fff;
+}
+main section.forum .forum-list .forum-item .chat-container .chat-message ul.chat-message-list li.chat-message-item .chat-message-output span.chat-message-time{
+    font-size: 0.5em;
+    font-weight: 400;
+    width: 100%;
+    height: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    color: #000;
+    opacity: 0.5;
+    margin-top: 5px;
+}
+main section.forum .forum-list .forum-item .chat-container .chat-message ul.chat-message-list li.chat-message-item.chat-right .chat-message-output span.chat-message-time{
+    color: #fff;
+}
+main section.forum .forum-list .forum-item .chat-container .chat-message ul.chat-message-list li.chat-message-item .chat-message-output span.chat-message-name{
+    background-color: #0B409C;
+    padding: 0.2em 0.4em;
+    color: #fff;
+    top: -10px;
+    left: 2px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    display: inline-block;
+    position: absolute;
     font-size: 0.6em;
     font-weight: 400;
 }
-
-main section.forum .forum-list .forum-item .chat-container .chat-message .chat-user .chat-info .info-name,
-main section.forum .forum-list .forum-item .chat-container .chat-message .chat-admin .chat-info .info-name {
-    width: 100%;
-    display: flex;
-    align-items: center;
+main section.forum .forum-list .forum-item .chat-container .chat-message ul.chat-message-list li.chat-message-item.chat-right .chat-message-output span.chat-message-name{
+    display: none;
 }
 
-main section.forum .forum-list .forum-item .chat-container .chat-message .chat-user .chat-info .info-name {
-    justify-content: end;
-}
-
-main section.forum .forum-list .forum-item .chat-container .chat-message .chat-user .chat-info .info-message .info-name span,
-main section.forum .forum-list .forum-item .chat-container .chat-message .chat-admin .chat-info .info-message .info-name span {
-    align-self: flex-end;
-}
-
-main section.forum .forum-list .forum-item .chat-container .chat-message .chat-user .chat-info span.username {
-    align-self: flex-end;
-    background-color: blue;
-    padding: 2px 5px;
-    border-radius: 3px;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    -ms-border-radius: 3px;
-    -o-border-radius: 3px;
-    color: #fff;
-}
-
-main section.forum .forum-list .forum-item .chat-container .chat-message .chat-user .chat-info span.time {
-    align-self: flex-start;
-    font-size: 0.4em;
-}
-
-main section.forum .forum-list .forum-item .chat-container .chat-message .chat-admin .chat-info span.username {
-    align-self: flex-start;
-    background-color: #ddd;
-    padding: 2px 5px;
-    border-radius: 3px;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    -ms-border-radius: 3px;
-    -o-border-radius: 3px;
-}
-
-main section.forum .forum-list .forum-item .chat-container .chat-message .chat-admin .chat-info span.time {
-    align-self: flex-end;
-    font-size: 0.4em;
-}
-
-main section.forum .forum-list .forum-item .chat-container .chat-message .chat-user .chat-info .info-message p,
-main section.forum .forum-list .forum-item .chat-container .chat-message .chat-admin .chat-info .info-message p {
-    font-size: 0.5em;
-    font-weight: 500;
-    padding: 0.3em 1em;
-    color: #fff;
-    line-height: 1.5em;
-}
 
 main section.forum .forum-list .forum-item .chat-container .chat-message-input {
     width: 100%;
@@ -603,7 +558,6 @@ main section.forum .forum-list .forum-item .chat-container .chat-message-input {
     gap: 0.5em;
     padding: 0.5em;
     background-color: #ddd;
-    /* border-top: 1px solid #0B409C; */
     box-shadow: 0px -10px 16px rgba(0, 0, 0, 0.5);
 }
 
